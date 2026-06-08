@@ -1,0 +1,3 @@
+- [SA PLUG Mobile App](sa-plug-mobile.md) — Expo Router mobile app, full screen list of routes and key implementation patterns.
+- [SA PLUG Auth System](sa-plug-auth.md) — demo login, OTP flow, guest mode, and guest-blocking patterns used in this app.
+- [SA PLUG Admin Panel](sa-plug-admin-panel.md) — React+Vite admin panel: pages, auth flow, custom Orval mutator, and key integration patterns.

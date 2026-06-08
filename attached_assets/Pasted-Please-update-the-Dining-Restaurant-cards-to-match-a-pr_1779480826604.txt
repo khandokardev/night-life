@@ -1,0 +1,153 @@
+Please update the Dining / Restaurant cards to match a professional production-quality design.
+
+## 🍽️ DINING CARD ACTION BUTTONS
+
+### Current Issue:
+
+The current action buttons do not look professional and are inconsistent.
+
+### Required Fix:
+
+For every Dining / Restaurant card:
+
+### Left Button
+
+Change the text to:
+
+```text
+View
+```
+
+Requirements:
+
+* Only display "View"
+* Remove "View Details" wording
+* Use a clean professional button style
+* Match the approved design language
+
+---
+
+### Right Button (Cart Action)
+
+Redesign the Add to Cart action completely.
+
+Requirements:
+
+* Use a modern professional icon/button
+* Better spacing
+* Better alignment
+* Better visual feedback
+* Consistent style throughout the application
+
+The cart action must look premium and production-ready.
+
+---
+
+## 🛒 CART FUNCTIONALITY
+
+### Current Issue:
+
+Cart interactions are unreliable.
+
+### Required Fix:
+
+When the user taps the cart icon/button:
+
+* Add item successfully
+* Show immediate visual confirmation
+* Update cart count correctly
+* Prevent UI freezing
+* Prevent stacked click states
+* Prevent buttons from becoming stuck
+
+The button must remain responsive.
+
+---
+
+## ✅ ADD-TO-CART FEEDBACK
+
+When an item is added:
+
+Show clear feedback such as:
+
+* Checkmark animation
+* Added confirmation
+* Cart badge update
+* Success state
+
+The user must immediately understand the item was added successfully.
+
+---
+
+## 🛍️ VIEW CART BAR
+
+Using the provided screenshot as reference:
+
+Create a professional floating "View Cart" section.
+
+Requirements:
+
+* Display after items are added
+* Clearly show cart status
+* Show total items
+* Show subtotal if available
+* Include a clear View Cart action
+* Match the screenshot structure and behavior
+
+The View Cart section must:
+
+* Be easy to access
+* Stay visible when appropriate
+* Not block content
+* Feel like a premium food-ordering experience
+
+---
+
+## 🔗 VIEW CART FUNCTION
+
+When the user taps View Cart:
+
+* Open the cart page
+* Show all selected items
+* Show quantities
+* Allow updates
+* Allow removal
+* Continue to checkout
+
+No broken navigation.
+
+---
+
+## 🎨 DESIGN REQUIREMENT
+
+Use:
+
+* Professional spacing
+* Modern iconography
+* Consistent button heights
+* Consistent alignment
+* Production-quality styling
+
+Avoid:
+
+* Basic placeholder buttons
+* Misaligned icons
+* Generic styling
+* Outdated cart controls
+
+---
+
+## 📸 SCREENSHOT COMPLIANCE
+
+Use the uploaded screenshot as the visual reference.
+
+Match:
+
+* Placement
+* Layout
+* Structure
+* Interaction flow
+
+The final Dining experience should feel like a polished premium food ordering application.
+
+All buttons must be functional, responsive, and visually consistent across the entire Dining module.

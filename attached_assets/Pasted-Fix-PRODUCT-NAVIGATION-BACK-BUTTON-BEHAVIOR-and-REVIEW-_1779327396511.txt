@@ -1,0 +1,127 @@
+Fix PRODUCT NAVIGATION BACK BUTTON BEHAVIOR and REVIEW ACCESS CONTROL properly. These are critical UX and logic issues.
+
+---
+
+## 🔙 1. BACK BUTTON NAVIGATION BUG (PRODUCT DETAIL → SHOPPING HOME)
+
+### Current Problem:
+
+* User opens Product A
+* Scrolls / browses Product B from “You may also like”
+* Presses BACK button
+* Instead of returning to previous product → goes to SHOPPING HOME page
+
+---
+
+## ❌ ROOT CAUSE (LIKELY)
+
+* Navigation stack is being replaced instead of pushed
+* Using `navigate.replace()` instead of `navigate.push()`
+* Product browsing inside same screen resets history
+* Scroll-based navigation breaking history stack
+
+---
+
+## ✅ REQUIRED FIX
+
+### 1. Proper Navigation Stack Handling
+
+* Each product click must:
+
+  * PUSH new route into history stack
+  * NOT replace current route
+
+---
+
+### 2. Back Button Behavior Fix
+
+Back button MUST follow:
+
+* Product B → Product A → Previous screen → Shopping Home
+
+NOT:
+
+* Product B → Shopping Home (❌ wrong)
+
+---
+
+### 3. Fix “You May Also Like” Navigation
+
+* Each recommended product must:
+
+  * Open as new stacked page
+  * Preserve navigation history correctly
+
+---
+
+### 4. Disable Route Reset Issues
+
+* Prevent any:
+
+  * scroll reset navigation
+  * full page remount navigation
+
+---
+
+## ⭐ 2. REVIEW SYSTEM ACCESS CONTROL (VERY IMPORTANT)
+
+### Current Problem:
+
+* Users can write reviews BEFORE purchasing product
+
+---
+
+## ❌ REQUIRED RULE
+
+Only allow review if:
+
+✔ User has PURCHASED the product
+✔ Order is marked as DELIVERED / COMPLETED
+
+---
+
+## ✅ REQUIRED FIX
+
+### 1. Add Purchase Verification Check
+
+Before showing review input:
+
+* Check user order history
+* Confirm product is purchased
+* Confirm delivery status
+
+---
+
+### 2. Lock Review Input Otherwise
+
+If NOT purchased:
+
+* Hide review form OR disable it
+* Show message:
+
+  * “You can review this product after purchase”
+
+---
+
+### 3. Review Permission Logic
+
+* Purchased + delivered → allow review
+* Not purchased → block review
+* Pending order → block review
+
+---
+
+## 🧠 UX REQUIREMENTS
+
+* Back button must behave like real e-commerce apps
+* Product navigation must be stack-based
+* Reviews must be trust-based (verified buyers only)
+
+---
+
+## ⚠️ FINAL RESULT EXPECTED
+
+* Correct back navigation between products
+* No forced jump to shopping home
+* Professional review system (verified purchase only)
+* Stable, production-grade navigation behavior

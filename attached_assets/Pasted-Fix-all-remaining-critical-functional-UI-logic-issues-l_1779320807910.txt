@@ -1,0 +1,187 @@
+Fix all remaining critical functional + UI logic issues listed below. This is a production-level cleanup task. Do NOT ignore any section.
+
+---
+
+# 🚨 1. ADD NEW CARD BUTTON NOT WORKING
+
+* “Add New Card” button is currently non-functional
+* Fix onClick handler and navigation
+* Ensure it opens:
+
+  * Card input form (name, number, expiry, CVV)
+* Validate inputs properly
+* Save card securely (mock or real payment system depending on backend)
+
+---
+
+# 💳 2. VIP / MEMBERSHIP UPGRADE BUG (CRITICAL)
+
+### Problem:
+
+* VIP upgrade happens instantly without payment
+* No confirmation or payment step is triggered
+
+### Fix:
+
+* Add proper payment gate before upgrade
+* Flow must be:
+
+  1. Click Upgrade VIP
+  2. Show pricing screen
+  3. Payment method selection (Stripe or configured provider)
+  4. Successful payment confirmation
+  5. THEN upgrade user status
+
+### IMPORTANT:
+
+* No direct upgrade without payment under any condition
+* Prevent bypass via API or frontend
+
+---
+
+# 🎯 3. FEATURE BANNERS NOT WORKING (SWIPE + BUTTONS)
+
+### Issues:
+
+* “Explore New”, “Explore Tours”, “What’s New” buttons not working
+* Swipe not working in banners
+* Gold color showing incorrectly in light mode
+
+### Fix:
+
+* Enable horizontal swipe (carousel/slider properly implemented)
+* Fix pagination indicators
+* Ensure buttons are clickable and navigate correctly
+* Remove incorrect gold styling in light mode
+
+---
+
+# 🛍 4. CATEGORIES & PRODUCT SYSTEM IMPROVEMENT
+
+### Requirements:
+
+* Add missing category: **Accessories**
+* Add professional icons for ALL categories:
+
+  * Dining
+  * Tours
+  * Shop
+  * Clubs
+  * Accessories
+  * Others
+
+### Products/Services:
+
+* Each category must contain ~20 real-looking items
+* Include:
+
+  * Name
+  * Image
+  * Price (if applicable)
+  * Description
+  * Category tag
+* Ensure proper UI rendering and spacing
+
+---
+
+# 🎠 5. FEATURE BANNERS + SPLASH SCREEN SWIPE ISSUE
+
+### Problem:
+
+* Swipe not working on feature banners
+* Splash screen animation or transition not working properly
+
+### Fix:
+
+* Implement proper carousel/gesture handling
+* Ensure:
+
+  * Smooth swipe
+  * Proper index tracking
+  * Loop or pagination works correctly
+* Splash screen must:
+
+  * Load once
+  * Transition smoothly to home screen
+
+---
+
+# 🎨 6. GOLD COLOR BUG (LIGHT MODE ISSUE - CRITICAL UI BUG)
+
+### Problem:
+
+Many elements are still gold in light mode:
+
+* VIP badge
+* Profile picture border
+* Settings icons
+* QR code
+* Map icons
+* Direction buttons
+* Reserve buttons
+
+### Fix:
+
+* Remove ALL gold color usage from light mode globally
+* Replace with light mode theme colors
+* Ensure:
+
+  * Theme system is centralized
+  * No hardcoded gold (#FFD700 etc.)
+* Maintain separate dark mode styling
+
+---
+
+# 📦 7. BOOKING FLOW BUG (CANCEL / SUBMIT ISSUE)
+
+### Problem:
+
+* Booking request is instantly submitted or canceled on click
+* No confirmation or reason handling
+
+### Fix:
+
+* Add proper booking confirmation flow:
+
+  1. Select booking
+  2. Show confirmation modal
+  3. Optional reason input (for cancel)
+  4. Submit only after confirmation
+
+### Required:
+
+* Prevent accidental submission/cancellation
+* Add loading state + success message
+
+---
+
+# 🧾 8. CHECKOUT TERMS ISSUE (CRITICAL LEGAL FLOW BUG)
+
+### Problem:
+
+Checkout works WITHOUT accepting Terms & Conditions
+
+### Fix:
+
+* Add mandatory checkbox:
+
+  * “I agree to Terms & Conditions”
+* Disable checkout button until checked
+* Validate both frontend + backend
+
+### IMPORTANT:
+
+* Must NOT allow bypass via API or UI manipulation
+
+---
+
+# ⚠️ FINAL GLOBAL REQUIREMENTS
+
+* Fix all UI inconsistencies
+* Remove all hardcoded gold colors in light mode
+* Ensure all buttons are functional
+* Ensure swipe/carousel works everywhere
+* Ensure payment flows are REAL (no fake upgrades)
+* Ensure booking flow is safe and confirmed
+* Ensure theme system is properly structured (light/dark separation)
+* Make app production-ready and stable

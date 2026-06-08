@@ -1,0 +1,221 @@
+Privacy Policy
+
+Last Updated: 10 May 2026
+
+Welcome to SA Plug (“SA Plug”, “we”, “our”, or “us”). Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, store, and protect your information when you use the SA Plug mobile application, website, and related services.
+
+By using SA Plug, you agree to the collection and use of information in accordance with this Privacy Policy.
+
+⸻
+
+1. Information We Collect
+
+Personal Information
+
+We may collect personal information including:
+
+* Full name
+* Email address
+* Phone number
+* Account login details
+* Profile information
+* Booking preferences
+
+Booking & Reservation Information
+
+When using SA Plug, we may collect:
+
+* Club reservations
+* Bottle service selections
+* Tour bookings
+* Restaurant reservations
+* Guest counts
+* Dates and times
+* Order history
+* Purchase information
+
+Payment Information
+
+Payments are processed through third-party payment providers. We may receive transaction confirmations and billing-related information, but we do not store full credit or debit card details on our servers unless required by our payment processor.
+
+Device & Usage Information
+
+We may automatically collect:
+
+* Device type
+* Operating system
+* IP address
+* App usage activity
+* Browser type
+* Crash reports
+* Analytics data
+
+Location Information
+
+With your permission, SA Plug may collect approximate or precise location data to help display nearby venues, experiences, restaurants, or services.
+
+Communications
+
+We may collect information when you:
+
+* Contact customer support
+* Submit reviews or feedback
+* Send messages through the app
+* Participate in promotions or surveys
+
+⸻
+
+2. How We Use Your Information
+
+We use your information to:
+
+* Create and manage your account
+* Process bookings, reservations, and purchases
+* Confirm and manage club reservations and bottle service
+* Facilitate tour and dining reservations
+* Process payments and refunds
+* Communicate updates and confirmations
+* Improve app functionality and user experience
+* Provide customer support
+* Detect fraud and unauthorized activity
+* Comply with legal obligations
+
+⸻
+
+3. Sharing Your Information
+
+We may share information with trusted third parties including:
+
+Service Providers
+
+We may share information with third-party companies that help us operate SA Plug, including:
+
+* Payment processors
+* Cloud hosting providers
+* Analytics providers
+* Messaging and notification providers
+* Customer support systems
+* Security and fraud prevention services
+
+Venues & Business Partners
+
+To complete your booking or reservation, we may share relevant information with:
+
+* Clubs and nightlife venues
+* Tour operators
+* Restaurants
+* Hospitality partners
+* Product fulfillment providers
+
+Examples of information shared may include:
+
+* Your name
+* Booking time
+* Guest count
+* Reservation details
+* Contact information
+
+Legal & Compliance
+
+We may disclose information where required by law or where necessary to:
+
+* Respond to lawful requests
+* Enforce our Terms of Service
+* Protect users, partners, or SA Plug
+* Prevent fraud or security threats
+
+Business Transfers
+
+If SA Plug is involved in a merger, acquisition, investment, restructuring, or sale of assets, your information may be transferred as part of that transaction.
+
+⸻
+
+4. Data Security
+
+We implement reasonable administrative, technical, and security safeguards designed to protect your information from unauthorized access, disclosure, alteration, or destruction.
+
+However, no online platform or electronic transmission method can be guaranteed to be completely secure.
+
+⸻
+
+5. Data Retention
+
+We retain personal information only as long as necessary to:
+
+* Provide our services
+* Fulfill legal obligations
+* Resolve disputes
+* Enforce agreements
+* Support legitimate business operations
+
+Information that is no longer required may be securely deleted, anonymized, or archived.
+
+⸻
+
+6. Cookies & Analytics
+
+SA Plug may use cookies, analytics tools, SDKs, and similar technologies to:
+
+* Improve app performance
+* Remember user preferences
+* Analyze app traffic and usage
+* Enhance user experience
+* Deliver relevant content and promotions
+
+You may disable certain tracking technologies through your device or browser settings.
+
+⸻
+
+7. Your Rights
+
+Depending on your location and applicable laws, you may have the right to:
+
+* Access your personal information
+* Correct inaccurate information
+* Request deletion of information
+* Withdraw consent
+* Object to certain processing
+* Opt out of marketing communications
+
+To exercise these rights, please contact us using the information below.
+
+⸻
+
+8. Children’s Privacy
+
+SA Plug is not intended for users under the age of 18. We do not knowingly collect personal information from children.
+
+⸻
+
+9. Third-Party Services
+
+Our platform may contain links to third-party websites or services. We are not responsible for the privacy practices or content of third-party platforms.
+
+We encourage users to review third-party privacy policies before using their services.
+
+⸻
+
+10. International Data Transfers
+
+Your information may be transferred to and processed in countries outside your country of residence where our service providers or partners operate.
+
+By using SA Plug, you consent to such transfers where permitted by law.
+
+⸻
+
+11. Changes to This Privacy Policy
+
+We may update this Privacy Policy periodically. Updates will be posted on this page with a revised “Last Updated” date.
+
+Continued use of SA Plug after updates means you accept the revised Privacy Policy.
+
+⸻
+
+12. Contact Us
+
+If you have questions, concerns, or requests regarding this Privacy Policy, please contact us:
+
+SA Plug
+
+Email: support@saplug.com
+Website: www.saplug.com

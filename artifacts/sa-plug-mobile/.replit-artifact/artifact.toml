@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/sa-plug-mobile/"
+title = "SA PLUG Mobile"
+version = "1.0.0"
+id = "artifacts/sa-plug-mobile"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/sa-plug-mobile/" ]
+localPort = 20286
+
+[services.development]
+run = "pnpm --filter @workspace/sa-plug-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sa-plug-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/sa-plug-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "20286"
+BASE_PATH = "/sa-plug-mobile/"

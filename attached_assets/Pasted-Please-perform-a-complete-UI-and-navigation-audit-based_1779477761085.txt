@@ -1,0 +1,150 @@
+Please perform a complete UI and navigation audit based on the approved mockup design.
+
+## 🔴 MENU ICONS & CATEGORY ICONS
+
+### Current Issue:
+
+The menu icons and category icons do not match the approved mockup design.
+
+### Required Fix:
+
+* Replace ALL menu icons with the exact style used in the mockup
+* Replace ALL category icons with the exact style used in the mockup
+* Use professional, high-quality icons
+* Maintain consistent icon sizing, spacing, and alignment
+* Do not mix icon styles
+
+---
+
+## 📌 CATEGORY ICON POSITION
+
+### Current Issue:
+
+Category icons are not positioned correctly.
+
+### Required Fix:
+
+Place category icons exactly as shown in the mockup:
+
+* Categories must appear directly below the Featured section/banner
+* Maintain the same order, spacing, alignment, and sizing shown in the mockup
+* Match the original layout exactly
+
+Do not reposition categories elsewhere.
+
+---
+
+## 🍽️ RESTAURANT / DINING CARDS
+
+### Required Fix:
+
+For every restaurant, dining venue, club, and similar listing:
+
+Add professional action buttons/icons such as:
+
+* 👁 View / Details
+* 🛒 Add to Cart
+* ❤️ Favorite (if shown in design)
+
+Requirements:
+
+* Use professional icon buttons
+* Match the mockup styling
+* Position them exactly as shown in the design
+* Ensure all buttons function correctly
+
+---
+
+## 🔗 VIEW ALL BUTTONS
+
+### Current Issue:
+
+Some View All buttons do not work correctly.
+
+### Required Fix:
+
+Audit every View All button in the entire application.
+
+Examples:
+
+* Featured Products
+* Restaurants
+* Dining
+* Clubs
+* Tours
+* Shopping
+* Gallery
+* Recommendations
+* Any other section
+
+Requirements:
+
+* Every View All button must work
+* Every View All button must open the correct destination
+* No dead links
+* No placeholder screens
+* No incorrect routing
+
+---
+
+## 🔔 REMOVE NOTIFICATION ICON
+
+### Required Fix:
+
+On the page shown in the mockup/screenshot:
+
+* Remove the notification icon from the top header
+* Ensure header spacing remains balanced
+* Match the mockup design exactly
+
+Only remove it where the design specifies.
+
+---
+
+## 🎯 FEATURE BUTTONS
+
+### Current Issue:
+
+Feature buttons are not all functional.
+
+### Required Fix:
+
+Audit every feature card/banner/button.
+
+Examples:
+
+* Explore
+* Explore Tours
+* What's New
+* Featured Items
+* Promotional Banners
+* Membership Banners
+* Any feature section
+
+Requirements:
+
+* Every feature button must be clickable
+* Every feature button must navigate to the correct page/section
+* No inactive buttons
+* No incorrect destinations
+
+---
+
+## 📸 MOCKUP COMPLIANCE RULE
+
+The mockup design is the source of truth.
+
+Before marking the task complete:
+
+* Compare icons against the mockup
+* Compare category placement against the mockup
+* Compare header layout against the mockup
+* Verify all View All buttons work
+* Verify all feature buttons work
+* Verify all destinations are correct
+
+Do not redesign.
+
+Do not approximate.
+
+Replicate the approved mockup exactly.

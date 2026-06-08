@@ -1,0 +1,201 @@
+Also fix these additional authentication, payment, profile, navigation, and settings issues professionally. Do not skip anything.
+
+## 🔐 AUTHENTICATION & LOGIN/SIGNUP FIXES
+
+### Error Handling
+
+* If email, phone number, password, or OTP is wrong:
+
+  * Show professional validation messages
+  * Examples:
+
+    * “Invalid email address”
+    * “Incorrect password”
+    * “Invalid OTP”
+    * “Phone number not registered”
+* Do NOT allow broken or silent failures.
+
+### Phone Signup Password Option
+
+* When creating account with phone number:
+
+  * User must be able to create/set password manually
+  * Password field is currently missing or not functioning properly
+* Fix full flow:
+
+  * Phone → OTP → Password Create → Account Created
+
+### Social Login Fixes
+
+Fix Google, Facebook, and Apple authentication completely.
+
+Current issue:
+
+* Login/signup redirects are broken
+* Authentication flow is not working properly
+
+Requirements:
+
+* Google login must properly authenticate and redirect to correct page
+* Facebook login must properly authenticate and redirect correctly
+* Apple login/signup must work correctly
+* Prevent infinite loading or failed redirects
+
+### Prevent Unauthorized Login
+
+* Users must NOT be able to access account/dashboard without:
+
+  * Proper signup
+  * Proper login
+  * Successful verification
+* Add route protection and session validation
+
+---
+
+## 📄 LEGAL PAGES FIX
+
+The following pages/buttons are not working properly:
+
+* Privacy Policy
+* Terms & Conditions
+* Refund Policy
+
+Fix:
+
+* Ensure all pages open correctly
+* Proper routing/navigation
+* Professional page layout
+
+---
+
+## 👤 DEMO PROFILE UPDATE
+
+* Change demo/default profile name and email to:
+
+  * Name: “Big Boy”
+
+---
+
+## 💬 SUPPORT & BRANDING FIXES
+
+### Branding Text Fix
+
+* Replace every instance of:
+
+  * “SA PLUG Concierge”
+* With:
+
+  * “SA PLUG”
+
+### Chat Support Naming
+
+* In support/chat section:
+
+  * Use professional naming like:
+
+    * “SA PLUG Support”
+    * or “SA PLUG Help Center”
+
+---
+
+## 📲 REAL OTP FUNCTIONALITY (IMPORTANT)
+
+OTP must actually work in real-time.
+
+Requirements:
+
+* OTP SMS must send to actual phone number
+* Email OTP must send to actual email
+* OTP verification must function properly
+* Add resend OTP option
+* Add OTP expiry timer
+* Handle invalid/expired OTP properly
+
+If API keys or provider setup is needed, request required credentials.
+
+---
+
+## 🖼 PROFILE PHOTO SYSTEM
+
+Users must be able to:
+
+* Upload profile photo
+* Change profile picture
+* Remove/update photo
+
+Requirements:
+
+* Camera/gallery upload support
+* Save image properly in database/storage
+* Profile image must persist after login/logout
+
+---
+
+## 💳 CHECKOUT & PAYMENT SYSTEM
+
+Fix all checkout and payment functionality.
+
+Requirements:
+
+* Payment card form must fully work
+* Users should be able to:
+
+  * Enter card details
+  * Complete payment
+  * Receive successful checkout flow
+
+Implement proper:
+
+* Cart → Checkout → Payment → Confirmation process
+
+If Stripe/API/payment credentials are needed:
+
+* Request Stripe publishable key + secret key from owner
+
+---
+
+## 🌍 LANGUAGE SETTINGS
+
+Add language/accent options:
+
+* Australian English
+* UK English
+* USA English
+* Other English variants if possible
+
+Requirements:
+
+* Language selection must persist
+* Proper localization handling
+
+---
+
+## 🔙 NAVIGATION & BACK BUTTON FIXES
+
+Current issue:
+
+* In Settings → Language page → pressing back redirects incorrectly
+* Sometimes goes to Terms & Conditions or unrelated screens
+
+Fix:
+
+* Correct navigation stack handling
+* Back button must always return to previous screen properly
+* Home/back/menu navigation must behave professionally across entire app
+
+Check all:
+
+* Back navigation
+* Menu navigation
+* Deep navigation routes
+* Nested screens
+
+---
+
+## ⚠️ FINAL REQUIREMENTS
+
+* Make the app function like a real production-ready application
+* No fake/demo logic for critical systems
+* All authentication, payment, OTP, and navigation must work properly
+* Test every screen and flow after implementation
+* Ensure clean UI/UX and stable backend integration

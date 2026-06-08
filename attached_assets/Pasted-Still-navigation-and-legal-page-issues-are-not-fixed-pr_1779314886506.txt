@@ -1,0 +1,116 @@
+Still navigation and legal page issues are not fixed properly. Please carefully fix the following problems professionally.
+
+## 🔙 BACK BUTTON / NAVIGATION BUG (CRITICAL)
+
+### Current Problem:
+
+When:
+
+1. User opens Settings
+2. Clicks “Terms & Conditions”
+3. Then goes to “Edit Profile”
+4. Then presses Back button
+
+The app incorrectly returns to “Terms & Conditions” again instead of returning normally to:
+
+* Previous screen
+* Settings
+* Home
+* Or correct navigation stack
+
+### Required Fix:
+
+* Fix navigation stack/history handling completely
+* Back button must always behave correctly
+* Prevent old screens from staying stuck in stack history
+* Use proper navigation reset or replace where necessary
+
+### Check All Navigation:
+
+* Settings
+* Edit Profile
+* Terms & Conditions
+* Privacy Policy
+* Refund Policy
+* Home
+* Menu navigation
+* Nested screens
+
+### Important:
+
+Navigation should work like a real production app:
+
+* No looping
+* No incorrect redirects
+* No broken back behavior
+
+---
+
+## 📄 LEGAL PAGES NOT ACCESSIBLE DURING SIGNUP
+
+### Current Problem:
+
+When user is on Login/Signup/Create Account page:
+
+* Clicking Privacy Policy does not open properly
+* Clicking Terms & Conditions does not work properly
+* Legal pages are inaccessible
+
+### Required Fix:
+
+* Make all legal pages accessible directly from:
+
+  * Login page
+  * Signup page
+  * Create account page
+  * Settings page
+
+### Ensure:
+
+* Proper routing
+* Proper scrolling
+* Proper mobile responsiveness
+* Working back navigation
+
+---
+
+## 💰 REFUND POLICY IMPLEMENTATION
+
+If professionally appropriate for the app:
+
+* Add Refund Policy page and button
+* Ensure button functions correctly
+
+### Requirements:
+
+* Professional UI layout
+* Accessible from Settings and Checkout sections
+* Proper navigation support
+
+---
+
+## 📝 ADD PROFESSIONAL CONTENT
+
+Add proper professional content/pages for:
+
+* Privacy Policy
+* Terms & Conditions
+* Refund Policy
+
+Requirements:
+
+* Use realistic app/business wording
+* Mobile-friendly layout
+* Proper headings and formatting
+* No placeholder lorem ipsum text
+* Add effective date and sections professionally
+
+---
+
+## ⚠️ FINAL REQUIREMENTS
+
+* Test every navigation flow manually
+* Fix all back button stack issues
+* Ensure no page loops or incorrect redirects exist
+* Make legal pages fully functional everywhere in the app
+* Ensure production-level UX behavior

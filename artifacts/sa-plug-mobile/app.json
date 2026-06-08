@@ -1,0 +1,88 @@
+{
+  "expo": {
+    "name": "SA PLUG",
+    "slug": "sa-plug-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo.png",
+    "scheme": "saplug",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.saplug.mobile",
+      "buildNumber": "1",
+      "requireFullScreen": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "SA PLUG needs camera access to scan QR codes.",
+        "NSPhotoLibraryUsageDescription": "SA PLUG needs photo library access to save your QR codes.",
+        "NSLocationWhenInUseUsageDescription": "SA PLUG uses your location to find nearby venues.",
+        "NSCalendarsUsageDescription": "SA PLUG needs calendar access to add your booking events.",
+        "NSUserNotificationUsageDescription": "SA PLUG sends you booking confirmations and exclusive offers."
+      }
+    },
+    "android": {
+      "package": "com.saplug.mobile",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo.png",
+        "backgroundColor": "#000000"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE"
+      ],
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router"
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Feather.ttf"
+          ]
+        }
+      ],
+      "expo-web-browser",
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "SA PLUG needs calendar access to add your booking events."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "SA PLUG needs photo library access to save your QR codes.",
+          "savePhotosPermission": "SA PLUG needs permission to save QR codes to your gallery.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID"
+      }
+    },
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

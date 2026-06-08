@@ -1,0 +1,466 @@
+Create a world-class premium luxury nightlife and lifestyle mobile application called “SA PLUG” for both iOS and Android using React Native + Expo (preferred) or Flutter if needed.
+
+The app must look extremely premium, modern, elegant, smooth, cinematic, and luxury-focused.
+The entire UI/UX design should follow the exact visual style from the provided reference images.
+
+BRAND DETAILS
+App Name
+
+SA PLUG
+
+Brand Meaning
+
+A premium South African nightlife, experiences, luxury booking, tourism, events, and lifestyle platform.
+
+Brand Slogan
+
+“CONNECT | EXPERIENCE | BELONG”
+
+Brand Personality
+Luxury
+Exclusive
+Premium nightlife
+VIP lifestyle
+Elegant
+Modern
+Dark aesthetic
+African luxury vibe
+High-end concierge experience
+DESIGN SYSTEM
+Theme
+
+Ultra luxury dark UI.
+
+Primary Colors
+Pure black background (#000000)
+Deep charcoal (#0D0D0D)
+Gold accents (#D4AF37)
+Warm gold gradient
+White text (#FFFFFF)
+Soft gray secondary text (#B3B3B3)
+Visual Style
+Cinematic nightlife visuals
+Luxury VIP club aesthetic
+Smooth glassmorphism
+Soft shadows
+Gold glowing buttons
+Premium card layouts
+Rounded corners
+Elegant typography
+Smooth animations
+High-end mobile app feel like Uber Black + Airbnb Luxe + Dubai VIP Concierge
+Typography
+
+Use elegant modern fonts:
+
+Poppins
+SF Pro Display
+Inter
+
+Use:
+
+Bold large headings
+Thin luxury subtitles
+Premium spacing
+APP STRUCTURE
+
+Build a complete scalable production-ready app.
+
+MAIN NAVIGATION (BOTTOM TAB BAR)
+
+Create a premium bottom navigation with icons and labels.
+
+Tabs:
+
+Home
+Clubs
+Tours
+Reservations
+Shop
+
+Bottom navigation must:
+
+Glow gold when active
+Smooth transitions
+Blur/glass background
+Modern floating style
+AUTHENTICATION SYSTEM
+
+Create full authentication flow:
+
+Screens
+Splash Screen
+Onboarding
+Welcome Screen
+Sign In
+Sign Up
+Forgot Password
+OTP Verification
+Social Login
+Login Methods
+Email
+Phone Number
+Google
+Apple ID
+Facebook
+User Profile Features
+Upload profile photo
+Personal details
+Booking history
+Saved clubs
+Saved tours
+Wishlist
+Payment methods
+Notifications
+VIP membership status
+HOME SCREEN
+
+Create a luxury homepage exactly inspired by the provided images.
+
+Home Sections
+Hero Banner Slider
+
+Large premium carousel banners with:
+
+Clubs
+Bottle service
+Luxury events
+VIP nightlife
+
+Include:
+
+“Reserve The Night”
+CTA buttons
+Animated transitions
+Quick Access Categories
+
+Luxury icon cards:
+
+Clubs
+Tours
+Dining
+Events
+VIP
+Reservations
+Shop
+Concierge
+Upcoming Events Section
+
+Horizontal scroll cards with:
+
+Event image
+Event title
+Date
+Venue
+VIP badge
+Book Now button
+Tours Section
+
+Luxury tour cards:
+
+Safari Experience
+Cape Town Tours
+Wine Tours
+Helicopter Tours
+Yacht Experiences
+
+Include:
+
+Pricing
+Ratings
+Book buttons
+Clubs / Nightlife Section
+
+Premium club listings:
+
+Onyx Sandton
+Coco Sandton
+Zone 6 Venue
+Kong Rosebank
+
+Each card includes:
+
+Rating
+Music genres
+VIP tags
+Table booking button
+Club image
+Location
+Discover Section
+
+Luxury lifestyle discovery cards:
+
+Rooftop dining
+Pool parties
+Fine dining
+Champagne experiences
+Luxury sunset cruises
+CLUBS SCREEN
+
+Create a premium nightlife discovery page.
+
+Features
+Search bar
+Filters
+Categories
+Map view
+Saved favorites
+VIP labels
+Club Categories
+Rooftop
+Amapiano
+Afrobeats
+Hip Hop
+EDM
+Lounge
+VIP
+Club Details Page
+
+Must include:
+
+Full image gallery
+Videos
+Description
+Music type
+Dress code
+Entry fees
+VIP packages
+Bottle service
+Table layouts
+Live availability
+Reviews
+Ratings
+Directions
+Contact info
+WhatsApp booking
+RESERVATION SYSTEM
+
+Build complete reservation system.
+
+Reservation Features
+Date picker
+Guest count
+Table selection
+VIP packages
+Special requests
+Payment integration
+QR booking confirmation
+Booking status tracking
+Reservation Types
+Club tables
+Dining
+Tours
+Events
+VIP packages
+EVENTS MODULE
+Features
+Event discovery
+Trending events
+Ticket booking
+QR tickets
+Countdown timer
+Event reminders
+Share events
+Event gallery
+TOURS MODULE
+
+Create luxury tourism booking system.
+
+Tour Types
+Safari
+City Tours
+Wine Tours
+Luxury Travel
+Yacht Rentals
+Helicopter Tours
+Tour Features
+Booking system
+Schedule
+Guides
+Pricing
+Maps
+Reviews
+Photo galleries
+DINING MODULE
+
+Luxury dining reservation system.
+
+Features
+Restaurant listings
+Fine dining
+Rooftop dining
+Menus
+Reservation booking
+Chef specials
+Ratings
+Reviews
+SHOP MODULE
+
+Create premium ecommerce shop.
+
+Shop Features
+Luxury products
+Event merchandise
+VIP accessories
+Fashion
+Drinks packages
+Cart system
+Checkout
+Order tracking
+Wishlist
+Secure payments
+CART & CHECKOUT
+
+Create elegant ecommerce checkout flow.
+
+Features
+Add to cart
+Quantity controls
+Promo codes
+Payment methods
+Order summary
+Tax calculation
+Secure checkout
+Payment Methods
+Stripe
+Apple Pay
+Google Pay
+PayPal
+Credit/Debit cards
+CHAT / CONTACT SYSTEM
+
+Create luxury concierge support system.
+
+Features
+Live chat
+AI concierge assistant
+WhatsApp integration
+Email support
+Contact forms
+Booking assistance
+ADMIN PANEL (IMPORTANT)
+
+Create scalable admin dashboard.
+
+Admin Features
+Manage clubs
+Manage tours
+Manage events
+Manage reservations
+User management
+Analytics dashboard
+Push notifications
+Revenue tracking
+VIP membership management
+CMS content management
+PUSH NOTIFICATIONS
+
+Include:
+
+Event reminders
+Booking updates
+VIP promotions
+Tour reminders
+Flash offers
+ADVANCED FEATURES
+Add
+Dark/light support (default dark)
+Smooth page transitions
+Skeleton loaders
+Lazy image loading
+Offline support
+Real-time booking updates
+Geolocation
+Maps integration
+QR code generation
+Analytics
+Firebase backend
+Cloud storage
+Secure authentication
+High performance optimization
+TECH STACK
+
+Preferred:
+
+React Native
+Expo
+TypeScript
+Firebase
+Node.js backend
+MongoDB
+Stripe
+Zustand or Redux
+React Query
+NativeWind / Tailwind
+UI REQUIREMENTS
+Must Have
+Pixel-perfect mobile UI
+Premium animations
+Smooth scrolling
+Floating buttons
+Luxury glow effects
+Responsive layouts
+iPhone-style premium spacing
+Modern cards
+Elegant shadows
+Gold luxury borders
+ANIMATION STYLE
+
+Use:
+
+Framer Motion style animations
+Smooth fade-ins
+Slide transitions
+Parallax hero banners
+Animated buttons
+Hover effects
+Micro interactions
+APP QUALITY
+
+The final app must feel like:
+
+A real startup worth millions
+App Store featured app
+Luxury premium concierge platform
+High-end nightlife ecosystem
+IMPORTANT BRANDING RULES
+
+Use the uploaded SA PLUG logo throughout the app:
+
+Splash screen
+Header
+Login page
+App icon inspiration
+Loading animations
+
+Maintain the exact luxury black-and-gold identity consistently across ALL screens.
+
+FINAL OUTPUT REQUIREMENTS
+
+Generate:
+
+Full frontend mobile app
+Reusable components
+Clean folder structure
+Production-ready architecture
+Backend API structure
+Firebase integration setup
+Authentication flow
+Navigation setup
+Sample data
+Dummy API data
+Premium UI screens
+Responsive layouts
+Working demo structure
+
+The code must be:
+
+Clean
+Modern
+Scalable
+Professional
+Enterprise-level
+Optimized for App Store and Play Store deployment
+
+DO NOT create basic beginner UI.
+Create a truly premium luxury mobile application experience.

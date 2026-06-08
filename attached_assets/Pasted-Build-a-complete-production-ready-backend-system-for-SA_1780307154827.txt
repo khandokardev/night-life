@@ -1,0 +1,226 @@
+Build a complete production-ready backend system for SA PLUG, optimized for Hostinger deployment with full app control and integrations.
+
+---
+
+# 🎯 GOAL
+
+Create a scalable, secure backend that controls the entire SA PLUG mobile application dynamically from the server.
+
+---
+
+# 🔴 CORE SYSTEM REQUIREMENTS
+
+## 1. FULL ADMIN CONTROL PANEL
+
+Backend must allow full control of the app without code changes:
+
+* App branding:
+
+  * App name
+  * Logo
+  * Splash content
+  * UI text/content
+* Global settings management
+
+---
+
+## 2. CONTENT MANAGEMENT SYSTEM (CMS STYLE)
+
+Allow dynamic management of:
+
+* Categories (add/edit/delete)
+
+  * Icon support per category
+* Products (Shop)
+* Restaurants (Dining)
+* Clubs
+* Tours
+* Services
+* Upcoming Events
+
+Each item must support:
+
+* Title, description, images
+* Price
+* Availability
+* Tags (trending, featured, etc.)
+* Contact info
+* Address + Google Maps URL
+* Phone number
+* Dress code (where applicable)
+
+---
+
+## 3. BOOKING SYSTEM (FULLY DYNAMIC)
+
+* Table booking
+* Tour booking
+* Event booking
+* Club reservation
+
+Each booking must include:
+
+* Date / Time / Guest count
+* Validation rules
+* Status tracking (pending / confirmed / cancelled)
+
+---
+
+## 4. USER MANAGEMENT SYSTEM
+
+* User registration & login
+* Profile management
+* Role system (user / admin)
+* Booking history
+* Saved items
+* Order history
+
+---
+
+## 5. PROMOTIONAL MESSAGE SYSTEM
+
+* Send in-app notifications/promotions:
+
+  * Push notifications
+  * Promotional banners
+  * Targeted user messages
+* Support:
+
+  * All users
+  * Specific user groups
+  * Location-based or activity-based targeting
+
+---
+
+## 6. LIVE CHAT / HELP SUPPORT
+
+* Real-time chat system between user and support/admin
+* Chat history stored per user
+* Admin dashboard to reply and manage conversations
+
+---
+
+## 7. PAYMENT INTEGRATION READY (STRIPE)
+
+* Prepare backend structure for Stripe integration:
+
+  * Payment intents
+  * Webhooks support
+  * Transaction logging
+* Must allow future activation without restructuring system
+
+---
+
+## 8. OTP & AUTH SYSTEM (FIREBASE READY)
+
+* Phone/email OTP verification support
+* Firebase or alternative integration ready
+* Secure password reset flow
+* Token-based authentication (JWT recommended)
+
+---
+
+## 9. QR CODE SYSTEM
+
+* Generate unique QR codes for:
+
+  * Bookings
+  * Orders
+  * Reservations
+* Each QR must be dynamic and database-linked
+
+---
+
+## 10. REVIEW SYSTEM (AUTHENTIC ONLY)
+
+* Only verified users (completed purchase/booking) can submit reviews
+* Prevent fake reviews
+* Attach reviews to actual transactions
+* Admin moderation option
+
+---
+
+## 11. TRENDING / FEATURE SYSTEM
+
+* Backend-controlled flags:
+
+  * trending
+  * featured
+  * popular
+* Automatically reflect in frontend sections
+
+---
+
+## 12. NOTIFICATIONS SYSTEM
+
+* In-app notification system:
+
+  * Booking updates
+  * Promotions
+  * System alerts
+* Read/unread tracking
+
+---
+
+## 13. MAPS & LOCATION SUPPORT
+
+* Google Maps URL support for:
+
+  * Restaurants
+  * Events
+  * Services
+* Click-to-open navigation support
+
+---
+
+## 14. SECURITY & VALIDATION
+
+* Input validation for all APIs
+* Prevent unauthorized access
+* Secure admin routes
+* Rate limiting recommended
+
+---
+
+## 15. HOSTINGER DEPLOYMENT REQUIREMENTS
+
+* Must run on Hostinger VPS or Node.js hosting
+* Clean environment config (.env support)
+* No platform dependency (no Replit dependency)
+* Production-ready structure
+
+---
+
+## 16. SCALABILITY REQUIREMENT
+
+* Easily add new:
+
+  * Categories
+  * Services
+  * Features
+  * Payment gateways
+* No frontend code change required for new backend additions
+
+---
+
+# 🚀 OPTIONAL (RECOMMENDED UPGRADES)
+
+* Analytics dashboard (users, bookings, revenue)
+* Discount/coupon system
+* Referral system
+* Wishlist analytics
+* Multi-language support
+* Auto email notifications
+
+---
+
+# ✅ FINAL GOAL
+
+A fully dynamic backend where:
+
+* Entire SA PLUG app is controlled from admin panel
+* Stripe can be integrated anytime
+* Firebase OTP can be added anytime
+* Live chat works in real time
+* All content is backend-driven
+* Fully deployable on Hostinger VPS with no dependency issues

@@ -1,0 +1,171 @@
+Fix all remaining booking flow, cart logic, navigation bugs, and product interaction issues. This is a critical final-stage stabilization update.
+
+---
+
+## 📅 1. “BOOKING NOW” → EDIT BOOKING DETAILS (MISSING FLOW)
+
+### Issue:
+
+* After clicking “Booking Now”, there is no proper edit booking step
+
+### Fix:
+
+Add a proper professional flow:
+
+### Required Flow:
+
+1. User clicks **Booking Now**
+2. Booking details screen opens
+3. User can **EDIT booking details** before checkout
+4. Then proceed to checkout/payment
+
+### Requirements:
+
+* Add “Edit Booking Details” section/button
+* Ensure all booking fields are editable
+* Prevent skipping edit step in professional flow
+
+---
+
+## 🧾 2. CHECKOUT → ORDER SUMMARY EDIT BUTTON NOT WORKING
+
+### Issue:
+
+* Order summary edit button is not functional
+
+### Fix:
+
+* Connect edit button to booking/cart update screen
+* Allow:
+
+  * Change quantity
+  * Change items
+  * Update booking details
+* Ensure state updates reflect in checkout instantly
+
+---
+
+## 🧭 3. TOURS → “EXPLORE TOURS” BUTTON NOT WORKING
+
+### Issue:
+
+* Explore Tours button is not clickable or not navigating
+
+### Fix:
+
+* Fix navigation routing
+* Ensure it opens Tours listing screen properly
+* Verify button event handler is attached
+
+---
+
+## 🍹 4. CLUB MENU → QUANTITY + ADD TO CART ISSUES
+
+### Issues:
+
+* No quantity selector in club food/drink menu
+* No confirmation when item is added
+
+### Fix:
+
+* Add quantity selector (+ / -)
+* Add visual feedback when item is added:
+
+  * Tick mark ✔ OR “Added” toast message
+* Ensure users clearly understand item was added
+
+---
+
+## 🛒 5. FEATURED PRODUCT “ADDED” STATE BUG (CRITICAL)
+
+### Issue:
+
+* After adding product once, “Added” stays stuck
+* Cannot add same product with different size
+* Add to cart option disappears incorrectly
+
+### Fix:
+
+* Do NOT permanently lock product after first add
+* Each product variant must be independent:
+
+  * Same product + different size = allowed
+* “Added” state must:
+
+  * Reset per variant
+  * Not block future selections
+* Fix cart duplication logic
+
+---
+
+## 📍 6. BOOK A TABLE ISSUES
+
+### Issues:
+
+* Share button not working
+* “Directions” button not working
+
+### Fix:
+
+* Share button must open native share sheet
+* Directions button must open map navigation properly
+* Ensure correct location data is passed
+
+---
+
+## 🛍️ 7. SHOPPING PRODUCT DETAIL PAGE BUG (MAJOR UI ISSUE)
+
+### Issues:
+
+* Clicking product does NOT open proper product page
+* Page scrolls incorrectly
+* Layout breaks and jumps to wrong section
+
+### Fix:
+
+* Fix navigation routing to product detail page
+* Prevent auto-scroll on navigation
+* Ensure:
+
+  * Product detail opens cleanly
+  * Page does NOT jump to “You may also like”
+* Fix layout rendering order
+
+---
+
+## ❤️ 8. “YOU MAY ALSO LIKE” SECTION NOT CLICKABLE
+
+### Issue:
+
+* Suggested products are visible but not interactive
+
+### Fix:
+
+* Add click handlers for each product
+* Ensure:
+
+  * Opens correct product detail page
+  * Loads correct data dynamically
+
+---
+
+## ⚠️ FINAL SYSTEM REQUIREMENTS
+
+* Fix all navigation stack issues
+* Fix cart + booking state consistency
+* Ensure all buttons are functional and responsive
+* Remove UI glitches causing scroll jumps
+* Make product flow fully professional:
+
+  * View → Select → Add → Confirm → Checkout
+* Ensure no broken or silent UI elements remain
+
+---
+
+## ✅ FINAL RESULT EXPECTED
+
+* Booking flow fully editable before checkout
+* Cart system stable and variant-aware
+* All buttons clickable and functional
+* Product navigation stable and clean
+* No UI jumping or broken layouts

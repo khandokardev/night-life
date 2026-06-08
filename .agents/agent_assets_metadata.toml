@@ -1,0 +1,187 @@
+uploads = []
+
+[[generated]]
+id = "vpinzoD7zr9bpC89iOp4Z"
+uri = "file://artifacts/mockup-sandbox/public/images/hero.png"
+type = "image"
+title = "Cinematic nightlife club hero"
+
+[[generated]]
+id = "IIeDJVT3_3bONNYYDmBKn"
+uri = "file://artifacts/mockup-sandbox/public/images/safari.png"
+type = "image"
+title = "Safari Experience tour"
+
+[[generated]]
+id = "omciQ1MI2uckfGKRJkojX"
+uri = "file://artifacts/mockup-sandbox/public/images/capetown.png"
+type = "image"
+title = "Cape Town City Tour"
+
+[[generated]]
+id = "0GvlqT9G0M5URxLNn55lm"
+uri = "file://artifacts/mockup-sandbox/public/images/wine.png"
+type = "image"
+title = "Stellenbosch Wine Tour"
+
+[[generated]]
+id = "n3fAFwLEaZKvur7jU79su"
+uri = "file://artifacts/mockup-sandbox/public/images/onyx.png"
+type = "image"
+title = "Onyx Sandton Club"
+
+[[generated]]
+id = "CBx-zq0usOkiO9fKqW1BD"
+uri = "file://artifacts/mockup-sandbox/public/images/zone6.png"
+type = "image"
+title = "Zone 6 Venue Club"
+
+[[generated]]
+id = "v9aQ8VEmSKTy4MrWXovYe"
+uri = "file://artifacts/mockup-sandbox/public/images/coco.png"
+type = "image"
+title = "Coco Sandton Club"
+
+[[generated]]
+id = "alqMNJ7LczcDWnodW22oI"
+uri = "file://artifacts/mockup-sandbox/public/images/kong.png"
+type = "image"
+title = "Kong Rosebank Club"
+
+[[generated]]
+id = "PTJOPFj6wc0hFwmx11qJY"
+uri = "file://artifacts/mockup-sandbox/public/images/champagne.png"
+type = "image"
+title = "Champagne bottle"
+
+[[generated]]
+id = "kx2ARWBbDrM4vWJoxyILN"
+uri = "file://artifacts/mockup-sandbox/public/images/vodka.png"
+type = "image"
+title = "Vodka bottle"
+
+[[generated]]
+id = "cm0Wk5ksJBsAH2WnB3h5-"
+uri = "file://artifacts/mockup-sandbox/public/images/splash-bg.png"
+type = "image"
+title = "Splash Screen Background"
+
+[[generated]]
+id = "4G5Aoe0ydR7I9QmBJfu0J"
+uri = "file://artifacts/mockup-sandbox/public/images/onboard-1.png"
+type = "image"
+title = "Onboarding 1 Background"
+
+[[generated]]
+id = "Ug7LYtFwY3rP0EgulWoTN"
+uri = "file://artifacts/mockup-sandbox/public/images/onboard-2.png"
+type = "image"
+title = "Onboarding 2 Background"
+
+[[generated]]
+id = "756JI1iBzb-r8Jm4G97GN"
+uri = "file://artifacts/mockup-sandbox/public/images/onboard-3.png"
+type = "image"
+title = "Onboarding 3 Background"
+
+[[generated]]
+id = "1SQT393fwxYV4Waz0uOSq"
+uri = "file://artifacts/mockup-sandbox/public/images/welcome-bg.png"
+type = "image"
+title = "Welcome Screen Background"
+
+[[generated]]
+id = "_Uk6Rn1Pr-w73wmF3vLNR"
+uri = "file://artifacts/mockup-sandbox/public/images/auth-bg.png"
+type = "image"
+title = "Auth Screen Background"
+
+[[generated]]
+id = "Od_iYZ_BLWET37t-PQ7TL"
+uri = "file://artifacts/mockup-sandbox/public/images/shop-cap.png"
+type = "image"
+title = "SA PLUG Cap"
+
+[[generated]]
+id = "-TAHlffcqjtG1LIauxLvU"
+uri = "file://artifacts/mockup-sandbox/public/images/shop-bottle.png"
+type = "image"
+title = "VIP Bottle"
+
+[[generated]]
+id = "DwTTbDBfI5LdGBtEED5ih"
+uri = "file://artifacts/mockup-sandbox/public/images/shop-tote.png"
+type = "image"
+title = "SA PLUG Tote"
+
+[[generated]]
+id = "-0RfkA6_kCTcVZvfhBGCQ"
+uri = "file://artifacts/mockup-sandbox/public/images/shop-champagne.png"
+type = "image"
+title = "Champagne Set"
+
+[[generated]]
+id = "apEcni5ACryQBWPmJczXp"
+uri = "file://artifacts/mockup-sandbox/public/images/shop-hoodie.png"
+type = "image"
+title = "SA PLUG Hoodie"
+
+[[generated]]
+id = "EJzbIU6k8Qs5cOzsx5IHz"
+uri = "file://artifacts/mockup-sandbox/public/images/shop-wristband.png"
+type = "image"
+title = "Wristband"
+
+[[generated]]
+id = "oQj92YdJD9BWVxlfNfMnZ"
+uri = "file://artifacts/sa-plug-mobile/assets/images/icon.png"
+type = "image"
+title = "sa-plug-app-icon"
+
+[[outputs]]
+id = "lbZ728pdHtNuSf7wrCcVZ"
+uri = "file://artifacts/mockup-sandbox/public/images/tour-safari.jpg"
+type = "image"
+title = "African safari landscape with elephants at sunset, cinematic"
+
+[[outputs]]
+id = "IqOsW5S7p9oZjWiuCFSVB"
+uri = "file://artifacts/mockup-sandbox/public/images/tour-capetown.jpg"
+type = "image"
+title = "Cape Town Table Mountain aerial view, vibrant, golden hour"
+
+[[outputs]]
+id = "g7OatsJdFoHzh_u5L8Wuh"
+uri = "file://artifacts/mockup-sandbox/public/images/tour-wine.jpg"
+type = "image"
+title = "Stellenbosch wine farm, golden vineyards, luxury, South Africa"
+
+[[outputs]]
+id = "pfaxGH4m4OunGxcBGBhS1"
+uri = "file://artifacts/mockup-sandbox/public/images/tour-yacht.jpg"
+type = "image"
+title = "luxury yacht on blue ocean, South African coast, bright sky"
+
+[[outputs]]
+id = "hGhHCOx5f0IsjEP0jelS1"
+uri = "file://artifacts/mockup-sandbox/public/images/tour-helicopter.jpg"
+type = "image"
+title = "helicopter flying over Cape Town sunset, aerial view"
+
+[[outputs]]
+id = "ZE49DKTJPd0xHdDQRDVqM"
+uri = "file://sa-plug-backend.tar.gz"
+type = "unspecified"
+title = "SA PLUG Backend v1.1 — Hostinger Bundle (with file upload)"
+
+[[outputs]]
+id = "AkkMJTQFeC3zKkt-Yx_Be"
+uri = "file://DEPLOYMENT.md"
+type = "text"
+title = "Deployment Guide (Hostinger + App Store + Play Store)"
+
+[[outputs]]
+id = "p8w936UeAPZgPLJfSE5PX"
+uri = "file://MOBILE_BUILD_GUIDE.md"
+type = "text"
+title = "Mobile App Build Guide (Play Store + App Store)"

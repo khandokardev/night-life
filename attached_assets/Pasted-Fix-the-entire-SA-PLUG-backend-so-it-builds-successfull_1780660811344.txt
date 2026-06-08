@@ -1,0 +1,144 @@
+Fix the entire SA PLUG backend so it builds successfully on Hostinger without ANY TypeScript errors.
+
+Current issue: The project fails at `npm run build` due to multiple TypeScript compilation errors (Express types, AuthRequest typing, Zod schema, Stripe version mismatch, and implicit any errors).
+
+---
+
+# 🔴 CRITICAL FIX REQUIREMENTS
+
+## 1. TYPESCRIPT BUILD MUST PASS
+
+Ensure:
+
+* `npm install`
+* `npm run build`
+
+result in ZERO errors.
+
+---
+
+## 2. FIX ALL MISSING TYPES
+
+Install and properly configure:
+
+* @types/express
+* @types/cors
+* @types/jsonwebtoken
+* @types/qrcode
+* @types/node
+* @types/pg
+
+Ensure they are correctly recognized in TypeScript build.
+
+---
+
+## 3. FIX EXPRESS TYPES (IMPORTANT)
+
+Fix all route handlers to properly type:
+
+* req: Request
+* res: Response
+* next: NextFunction
+
+Also fix custom AuthRequest properly:
+
+```ts
+import { Request } from "express";
+
+export interface AuthRequest extends Request {
+  user?: any;
+}
+```
+
+Remove all:
+
+* implicit any errors
+* missing req/res types
+
+---
+
+## 4. FIX ZOD SCHEMA ISSUES
+
+Fix all invalid Zod usage:
+
+* Remove any usage of `._type`
+* Replace with correct Zod inferred types:
+
+```ts
+type User = z.infer<typeof userSchema>;
+```
+
+---
+
+## 5. FIX STRIPE VERSION ERROR
+
+Resolve Stripe API version mismatch:
+
+* Ensure Stripe SDK uses compatible API version
+* Remove invalid or unsupported API version strings like:
+  "2025-04-30.basil"
+
+Use stable supported version only.
+
+---
+
+## 6. FIX ROUTE TYPE ERRORS
+
+Fix all routes:
+
+* bookings.ts
+* auth.ts
+* users.ts
+* admin.ts
+* payments.ts
+* reviews.ts
+* notifications.ts
+
+Ensure:
+
+* req.body is properly typed
+* req.params is properly typed
+* res is properly typed
+
+---
+
+## 7. FIX QUERY / DB TYPE ISSUES
+
+Fix:
+
+* QueryResult iteration errors
+* Drizzle ORM type mismatches
+* any[] vs QueryResult conflicts
+
+Ensure all DB responses are properly typed.
+
+---
+
+## 8. NO BREAKING CHANGES
+
+* Keep current features intact:
+
+  * authentication
+  * bookings
+  * cart
+  * QR system
+  * reviews
+  * promotions
+  * admin panel
+
+---
+
+## 9. FINAL OUTPUT REQUIREMENT
+
+After fixes:
+
+* Project must build successfully
+* No TypeScript errors
+* No warnings blocking production
+* Fully deployable on Hostinger Node.js
+
+---
+
+# ✅ FINAL GOAL
+
+A fully production-ready backend that compiles cleanly and runs without errors on Hostinger VPS or Node.js hosting.

@@ -1,0 +1,206 @@
+রিপ্লিটে পাঠানোর জন্য আরও বিস্তারিত ও শক্তিশালী নির্দেশনা:
+
+Perform a complete audit and production-readiness review of both the SA PLUG Mobile App and Admin Panel.
+
+## CRITICAL ISSUES TO FIX
+
+### Dashboard Loading Errors
+
+The Dashboard still shows loading errors, failed requests, missing data, or blank sections.
+
+Required:
+
+* Identify the exact cause of all dashboard errors.
+* Fix broken API calls.
+* Fix database queries.
+* Fix missing endpoints.
+* Remove all failed loading states.
+* Dashboard statistics, charts, bookings, users, revenue, products, services and notifications must load correctly.
+
+### Stripe Integration
+
+Create a complete production-ready Stripe integration.
+
+Requirements:
+
+* No placeholder implementation.
+* No demo logic.
+* Stripe Settings page must exist and function.
+* Test Mode / Live Mode toggle.
+* Publishable Key field.
+* Secret Key field.
+* Webhook Secret field.
+* Webhook Status checker.
+* Payment Logs.
+* Transaction History.
+* Refund Management.
+* Subscription Support.
+* VIP Membership Support.
+* Booking Payment Support.
+* Product Purchase Support.
+
+The system must be ready so that later I only enter the Stripe API Keys and everything works correctly without additional development.
+
+### Multi-Currency System
+
+Create a centralized currency management system.
+
+Required:
+
+* Admin can select default currency.
+* Support multiple currencies.
+* Currency selector in Admin Settings.
+* Entire app automatically updates currency display.
+* Products, Services, Tours, Clubs, VIP Packages and Payments must use selected currency.
+* Exchange-rate architecture ready for future updates.
+
+### Firebase Audit
+
+Check and prepare Firebase integration.
+
+Required:
+
+* Authentication support.
+* Password reset.
+* Push notifications.
+* OTP readiness.
+* Firebase configuration page.
+* Firebase status validation.
+* Proper error handling.
+
+The system must be fully prepared so that Firebase credentials can be inserted later without code changes.
+
+### Image Upload System
+
+Currently many sections only allow image URLs.
+
+This is unacceptable.
+
+Required:
+
+* Direct image upload from local device.
+* Drag & Drop support.
+* Image preview.
+* Multiple image upload.
+* Banner upload.
+* Gallery upload.
+* Cover upload.
+* Hero image upload.
+* Automatic storage handling.
+
+Admins should not need to manually paste image URLs.
+
+### Live Support Chat System
+
+Create a professional real-time support system.
+
+App Side:
+
+* Help & Support section.
+* Live chat interface.
+* Message history.
+* Typing indicators.
+* Attachment support.
+* Online/Offline status.
+* Professional UI.
+
+Admin Side:
+
+* Support Inbox.
+* Conversation List.
+* Search User.
+* Assign Agents.
+* Reply System.
+* Notification System.
+* Unread Message Counters.
+
+### User Management
+
+Create a complete user management system.
+
+Admin should be able to:
+
+* Add User manually.
+* Create account using Email and Password.
+* Edit User.
+* Suspend User.
+* Delete User.
+* Reset Password.
+* Assign Roles.
+* View Bookings.
+* View Orders.
+* View Activity History.
+
+### Synchronization Audit
+
+Currently the Admin Panel does not appear synchronized with the App.
+
+If synchronization is working correctly, then all existing products, services, clubs, restaurants, tours, bookings and content should already be visible inside Admin.
+
+Required:
+
+* Audit all synchronization logic.
+* Connect all app content to database.
+* Remove hardcoded content.
+* Ensure Admin always reflects actual app data.
+* Ensure all Admin changes instantly update the App.
+
+### Remove Demo Data
+
+I found multiple examples of fake/demo data such as:
+
+* saplug.com.za
+* saplug.co.za
+* placeholder emails
+* dummy names
+* fake contact information
+
+Required:
+
+* Remove all demo placeholders.
+* Replace with professional production-ready defaults.
+* Create editable branding and contact settings.
+
+### Hostinger Deployment Readiness
+
+Prepare the entire Admin Panel backend for Hostinger Node.js deployment.
+
+Required:
+
+* Production build.
+* Environment variable configuration.
+* Database configuration file.
+* Upload-ready deployment package.
+* Deployment documentation.
+* Required environment variables list.
+* Required API keys list.
+* Required Firebase settings list.
+* Required Stripe settings list.
+* Startup instructions.
+* Build instructions.
+* Database migration instructions.
+
+### App Store & Google Play Readiness
+
+Prepare the mobile app for publishing.
+
+Required:
+
+* Production build configuration.
+* Remove development dependencies.
+* Remove debug code.
+* Remove mock data.
+* Fix all warnings and errors.
+* App Store compliance review.
+* Google Play compliance review.
+* Production-ready authentication.
+* Production-ready payments.
+* Production-ready notifications.
+
+Final Requirement:
+
+Do not leave any menu, page, button, setting, dashboard widget, image upload, payment section, chat section or management section as a placeholder, demo, mockup or incomplete implementation.
+
+Every visible feature must be fully functional, database-driven, synchronized with the app and production-ready.
+
+এটা দিলে Replit AI-কে একসাথে Admin Panel, Backend, Stripe, Firebase, Image Upload, Live Chat, Sync, Hostinger deployment এবং App Store/Play Store readiness—সবকিছু audit করে production-ready করতে বলবে।

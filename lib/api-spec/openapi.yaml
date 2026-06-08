@@ -1,0 +1,1450 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: SA PLUG Admin Panel API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+  - name: auth
+  - name: analytics
+  - name: users
+  - name: categories
+  - name: clubs
+  - name: restaurants
+  - name: tours
+  - name: products
+  - name: events
+  - name: bookings
+  - name: reviews
+  - name: notifications
+  - name: promotions
+  - name: settings
+  - name: chat
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  # ── Auth ────────────────────────────────────────────────────────────────────
+  /auth/login:
+    post:
+      operationId: adminLogin
+      tags: [auth]
+      summary: Admin login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginInput"
+      responses:
+        "200":
+          description: Login success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResult"
+        "401":
+          description: Invalid credentials
+
+  # ── Analytics ───────────────────────────────────────────────────────────────
+  /admin/analytics:
+    get:
+      operationId: getAnalytics
+      tags: [analytics]
+      summary: Dashboard analytics overview
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Analytics summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Analytics"
+
+  # ── Users ───────────────────────────────────────────────────────────────────
+  /admin/users:
+    get:
+      operationId: listUsers
+      tags: [users]
+      summary: List all users
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: User list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+
+  /admin/users/{id}:
+    patch:
+      operationId: updateUser
+      tags: [users]
+      summary: Update user role or block
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserUpdate"
+      responses:
+        "200":
+          description: Updated user
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+
+  # ── Categories ───────────────────────────────────────────────────────────────
+  /admin/categories:
+    get:
+      operationId: listCategories
+      tags: [categories]
+      summary: List all categories
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Category list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+    post:
+      operationId: createCategory
+      tags: [categories]
+      summary: Create category
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CategoryInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Category"
+
+  /admin/categories/{id}:
+    patch:
+      operationId: updateCategory
+      tags: [categories]
+      summary: Update category
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CategoryInput"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Category"
+    delete:
+      operationId: deleteCategory
+      tags: [categories]
+      summary: Delete category
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+
+  # ── Clubs ───────────────────────────────────────────────────────────────────
+  /admin/clubs:
+    get:
+      operationId: listClubs
+      tags: [clubs]
+      summary: List all clubs
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Club list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Club"
+    post:
+      operationId: createClub
+      tags: [clubs]
+      summary: Create club
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClubInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Club"
+
+  /admin/clubs/{id}:
+    patch:
+      operationId: updateClub
+      tags: [clubs]
+      summary: Update club
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClubInput"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Club"
+    delete:
+      operationId: deleteClub
+      tags: [clubs]
+      summary: Delete club
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+
+  # ── Restaurants ──────────────────────────────────────────────────────────────
+  /admin/restaurants:
+    get:
+      operationId: listRestaurants
+      tags: [restaurants]
+      summary: List all restaurants
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Restaurant list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Restaurant"
+    post:
+      operationId: createRestaurant
+      tags: [restaurants]
+      summary: Create restaurant
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RestaurantInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Restaurant"
+
+  /admin/restaurants/{id}:
+    patch:
+      operationId: updateRestaurant
+      tags: [restaurants]
+      summary: Update restaurant
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RestaurantInput"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Restaurant"
+    delete:
+      operationId: deleteRestaurant
+      tags: [restaurants]
+      summary: Delete restaurant
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+
+  # ── Tours ───────────────────────────────────────────────────────────────────
+  /admin/tours:
+    get:
+      operationId: listTours
+      tags: [tours]
+      summary: List all tours
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Tour list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Tour"
+    post:
+      operationId: createTour
+      tags: [tours]
+      summary: Create tour
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TourInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tour"
+
+  /admin/tours/{id}:
+    patch:
+      operationId: updateTour
+      tags: [tours]
+      summary: Update tour
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TourInput"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tour"
+    delete:
+      operationId: deleteTour
+      tags: [tours]
+      summary: Delete tour
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+
+  # ── Products ─────────────────────────────────────────────────────────────────
+  /admin/products:
+    get:
+      operationId: listProducts
+      tags: [products]
+      summary: List all products
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Product list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+    post:
+      operationId: createProduct
+      tags: [products]
+      summary: Create product
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProductInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+
+  /admin/products/{id}:
+    patch:
+      operationId: updateProduct
+      tags: [products]
+      summary: Update product
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProductInput"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+    delete:
+      operationId: deleteProduct
+      tags: [products]
+      summary: Delete product
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+
+  # ── Events ───────────────────────────────────────────────────────────────────
+  /admin/events:
+    get:
+      operationId: listEvents
+      tags: [events]
+      summary: List all events
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Event list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Event"
+    post:
+      operationId: createEvent
+      tags: [events]
+      summary: Create event
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EventInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Event"
+
+  /admin/events/{id}:
+    patch:
+      operationId: updateEvent
+      tags: [events]
+      summary: Update event
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EventInput"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Event"
+    delete:
+      operationId: deleteEvent
+      tags: [events]
+      summary: Delete event
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+
+  # ── Bookings ──────────────────────────────────────────────────────────────────
+  /admin/bookings:
+    get:
+      operationId: listAllBookings
+      tags: [bookings]
+      summary: List all bookings (admin)
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Booking list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Booking"
+
+  /admin/bookings/{id}:
+    patch:
+      operationId: updateBookingStatus
+      tags: [bookings]
+      summary: Approve / cancel booking
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookingStatusUpdate"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Booking"
+
+  # ── Reviews ──────────────────────────────────────────────────────────────────
+  /admin/reviews:
+    get:
+      operationId: listAllReviews
+      tags: [reviews]
+      summary: List all reviews (admin)
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Review list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Review"
+
+  /admin/reviews/{id}:
+    patch:
+      operationId: moderateReview
+      tags: [reviews]
+      summary: Approve or reject a review
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReviewModeration"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+
+  # ── Notifications ─────────────────────────────────────────────────────────────
+  /admin/notifications:
+    get:
+      operationId: listAllNotifications
+      tags: [notifications]
+      summary: List all notifications
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Notification list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Notification"
+    post:
+      operationId: sendNotification
+      tags: [notifications]
+      summary: Broadcast a notification
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NotificationInput"
+      responses:
+        "201":
+          description: Sent
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Notification"
+
+  # ── Promotions ────────────────────────────────────────────────────────────────
+  /admin/promotions:
+    get:
+      operationId: listAllPromotions
+      tags: [promotions]
+      summary: List all promotions
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Promotion list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Promotion"
+    post:
+      operationId: createPromotion
+      tags: [promotions]
+      summary: Create a promotion / campaign
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PromotionInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Promotion"
+
+  /admin/promotions/{id}:
+    patch:
+      operationId: updatePromotion
+      tags: [promotions]
+      summary: Toggle or update a promotion
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PromotionUpdate"
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Promotion"
+    delete:
+      operationId: deletePromotion
+      tags: [promotions]
+      summary: Delete a promotion
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+
+  # ── Settings ──────────────────────────────────────────────────────────────────
+  /admin/settings:
+    get:
+      operationId: getSettings
+      tags: [settings]
+      summary: Get all app settings as key/value map
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Settings map
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+    post:
+      operationId: upsertSetting
+      tags: [settings]
+      summary: Set an app setting
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SettingInput"
+      responses:
+        "200":
+          description: Updated
+
+  # ── Chat ──────────────────────────────────────────────────────────────────────
+  /admin/chat:
+    get:
+      operationId: listChats
+      tags: [chat]
+      summary: List all chat messages grouped by user
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Chat messages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChatMessage"
+
+  /admin/chat/{userId}/reply:
+    post:
+      operationId: replyToUser
+      tags: [chat]
+      summary: Send admin reply to user
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChatReplyInput"
+      responses:
+        "201":
+          description: Reply sent
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChatMessage"
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    HealthStatus:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+
+    LoginInput:
+      type: object
+      required: [password]
+      properties:
+        email:
+          type: string
+        phone:
+          type: string
+        password:
+          type: string
+
+    AuthResult:
+      type: object
+      required: [accessToken, refreshToken, user]
+      properties:
+        accessToken:
+          type: string
+        refreshToken:
+          type: string
+        user:
+          $ref: "#/components/schemas/User"
+
+    Analytics:
+      type: object
+      required: [totalUsers, totalBookings, confirmedBookings, pendingBookings, totalReviews, pendingReviews, activePromotions]
+      properties:
+        totalUsers:
+          type: integer
+        totalBookings:
+          type: integer
+        confirmedBookings:
+          type: integer
+        pendingBookings:
+          type: integer
+        totalReviews:
+          type: integer
+        pendingReviews:
+          type: integer
+        activePromotions:
+          type: integer
+
+    User:
+      type: object
+      required: [id, name, role, createdAt]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: ["string", "null"]
+        phone:
+          type: ["string", "null"]
+        avatar:
+          type: ["string", "null"]
+        role:
+          type: string
+        createdAt:
+          type: string
+
+    UserUpdate:
+      type: object
+      properties:
+        role:
+          type: string
+        name:
+          type: string
+
+    Category:
+      type: object
+      required: [id, name, icon, order, active]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        icon:
+          type: string
+        order:
+          type: integer
+        active:
+          type: boolean
+        createdAt:
+          type: string
+
+    CategoryInput:
+      type: object
+      required: [name, icon]
+      properties:
+        name:
+          type: string
+        icon:
+          type: string
+        order:
+          type: integer
+        active:
+          type: boolean
+
+    ContentBase:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: ["string", "null"]
+        images:
+          type: array
+          items:
+            type: string
+        price:
+          type: ["string", "null"]
+        address:
+          type: ["string", "null"]
+        mapsUrl:
+          type: ["string", "null"]
+        phone:
+          type: ["string", "null"]
+        contactEmail:
+          type: ["string", "null"]
+        isTrending:
+          type: boolean
+        isFeatured:
+          type: boolean
+        isPopular:
+          type: boolean
+        available:
+          type: boolean
+        tags:
+          type: array
+          items:
+            type: string
+        categoryId:
+          type: ["integer", "null"]
+        createdAt:
+          type: string
+
+    Club:
+      allOf:
+        - $ref: "#/components/schemas/ContentBase"
+        - type: object
+          required: [id, name]
+          properties:
+            id:
+              type: integer
+            dressCode:
+              type: ["string", "null"]
+            openingHours:
+              type: ["string", "null"]
+            minSpend:
+              type: ["string", "null"]
+
+    ClubInput:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: string
+        address:
+          type: string
+        mapsUrl:
+          type: string
+        phone:
+          type: string
+        contactEmail:
+          type: string
+        isTrending:
+          type: boolean
+        isFeatured:
+          type: boolean
+        available:
+          type: boolean
+        tags:
+          type: array
+          items:
+            type: string
+        categoryId:
+          type: integer
+        dressCode:
+          type: string
+        openingHours:
+          type: string
+        minSpend:
+          type: string
+
+    Restaurant:
+      allOf:
+        - $ref: "#/components/schemas/ContentBase"
+        - type: object
+          required: [id, name]
+          properties:
+            id:
+              type: integer
+            cuisine:
+              type: ["string", "null"]
+            openingHours:
+              type: ["string", "null"]
+            dressCode:
+              type: ["string", "null"]
+            reservationRequired:
+              type: boolean
+
+    RestaurantInput:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: string
+        address:
+          type: string
+        mapsUrl:
+          type: string
+        phone:
+          type: string
+        isTrending:
+          type: boolean
+        isFeatured:
+          type: boolean
+        available:
+          type: boolean
+        cuisine:
+          type: string
+        openingHours:
+          type: string
+        dressCode:
+          type: string
+        reservationRequired:
+          type: boolean
+
+    Tour:
+      allOf:
+        - $ref: "#/components/schemas/ContentBase"
+        - type: object
+          required: [id, name]
+          properties:
+            id:
+              type: integer
+            duration:
+              type: ["string", "null"]
+            maxGroupSize:
+              type: ["integer", "null"]
+            meetingPoint:
+              type: ["string", "null"]
+
+    TourInput:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: string
+        address:
+          type: string
+        isTrending:
+          type: boolean
+        available:
+          type: boolean
+        duration:
+          type: string
+        maxGroupSize:
+          type: integer
+        meetingPoint:
+          type: string
+
+    Product:
+      allOf:
+        - $ref: "#/components/schemas/ContentBase"
+        - type: object
+          required: [id, name]
+          properties:
+            id:
+              type: integer
+            sku:
+              type: ["string", "null"]
+            stock:
+              type: integer
+            brand:
+              type: ["string", "null"]
+
+    ProductInput:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: string
+        isFeatured:
+          type: boolean
+        available:
+          type: boolean
+        sku:
+          type: string
+        stock:
+          type: integer
+        brand:
+          type: string
+
+    Event:
+      allOf:
+        - $ref: "#/components/schemas/ContentBase"
+        - type: object
+          required: [id, name]
+          properties:
+            id:
+              type: integer
+            eventDate:
+              type: ["string", "null"]
+            eventTime:
+              type: ["string", "null"]
+            venue:
+              type: ["string", "null"]
+            dressCode:
+              type: ["string", "null"]
+            lineup:
+              type: array
+              items:
+                type: string
+            ticketUrl:
+              type: ["string", "null"]
+
+    EventInput:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: string
+        address:
+          type: string
+        isTrending:
+          type: boolean
+        isFeatured:
+          type: boolean
+        available:
+          type: boolean
+        eventDate:
+          type: string
+        eventTime:
+          type: string
+        venue:
+          type: string
+        dressCode:
+          type: string
+        lineup:
+          type: array
+          items:
+            type: string
+        ticketUrl:
+          type: string
+
+    Booking:
+      type: object
+      required: [id, userId, bookingType, refId, refName, date, time, guests, status]
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        bookingType:
+          type: string
+        refId:
+          type: integer
+        refName:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        guests:
+          type: integer
+        status:
+          type: string
+        qrCode:
+          type: ["string", "null"]
+        totalAmount:
+          type: ["string", "null"]
+        notes:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    BookingStatusUpdate:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          enum: [pending, confirmed, cancelled]
+
+    Review:
+      type: object
+      required: [id, userId, refType, refId, rating, approved]
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        bookingId:
+          type: ["integer", "null"]
+        refType:
+          type: string
+        refId:
+          type: integer
+        rating:
+          type: integer
+        body:
+          type: ["string", "null"]
+        approved:
+          type: boolean
+        createdAt:
+          type: string
+
+    ReviewModeration:
+      type: object
+      required: [approved]
+      properties:
+        approved:
+          type: boolean
+
+    Notification:
+      type: object
+      required: [id, type, title, body, read, createdAt]
+      properties:
+        id:
+          type: integer
+        userId:
+          type: ["integer", "null"]
+        type:
+          type: string
+        title:
+          type: string
+        body:
+          type: string
+        read:
+          type: boolean
+        createdAt:
+          type: string
+
+    NotificationInput:
+      type: object
+      required: [title, body]
+      properties:
+        userId:
+          type: integer
+        type:
+          type: string
+          enum: [booking, promotion, system]
+        title:
+          type: string
+        body:
+          type: string
+
+    Promotion:
+      type: object
+      required: [id, title, type, targetAll, active, createdAt]
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        body:
+          type: ["string", "null"]
+        imageUrl:
+          type: ["string", "null"]
+        type:
+          type: string
+        targetAll:
+          type: boolean
+        active:
+          type: boolean
+        startsAt:
+          type: ["string", "null"]
+        endsAt:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+
+    PromotionInput:
+      type: object
+      required: [title]
+      properties:
+        title:
+          type: string
+        body:
+          type: string
+        imageUrl:
+          type: string
+        type:
+          type: string
+          enum: [banner, push, targeted]
+        targetAll:
+          type: boolean
+        active:
+          type: boolean
+        startsAt:
+          type: string
+        endsAt:
+          type: string
+
+    PromotionUpdate:
+      type: object
+      properties:
+        active:
+          type: boolean
+        title:
+          type: string
+
+    SettingInput:
+      type: object
+      required: [key, value]
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+
+    ChatMessage:
+      type: object
+      required: [id, userId, sender, body, createdAt]
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        sender:
+          type: string
+        body:
+          type: string
+        createdAt:
+          type: string
+
+    ChatReplyInput:
+      type: object
+      required: [body]
+      properties:
+        body:
+          type: string

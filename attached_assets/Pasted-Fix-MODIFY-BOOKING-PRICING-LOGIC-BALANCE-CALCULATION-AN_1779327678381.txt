@@ -1,0 +1,142 @@
+Fix MODIFY BOOKING PRICING LOGIC, BALANCE CALCULATION, AND POST-PAYMENT RESTRICTIONS properly. This is a critical payment integrity system update.
+
+---
+
+## 💰 1. MODIFY BOOKING → PRICE NOT UPDATING BUG
+
+### Current Problem:
+
+* User modifies booking (adds/removes items)
+* Price does NOT adjust correctly
+* Old payment remains unchanged or inconsistent
+
+---
+
+## ❌ ROOT CAUSE (LIKELY)
+
+* Booking price is stored as static final value after payment
+* No dynamic recalculation system
+* Modify flow not connected to pricing engine
+* No delta (difference) calculation between old vs new booking
+
+---
+
+## ✅ REQUIRED FIX (CORE LOGIC)
+
+### 1. Introduce Dynamic Price Calculation System
+
+Every booking must have:
+
+* Base price (original booking)
+* Added items price (modifications)
+* Total updated price = base + additions
+
+---
+
+## ➕ 2. MODIFY BOOKING RULE (IMPORTANT BUSINESS LOGIC)
+
+### AFTER PAYMENT RULE:
+
+Once booking is paid:
+
+* ❌ User CANNOT reduce items
+* ❌ User CANNOT remove or downgrade booking
+* ✅ User CAN ONLY add extra items/services
+
+---
+
+## 🧠 ALLOWED FLOW
+
+### Modify Booking AFTER PAYMENT:
+
+1. Load existing booking
+2. Show current paid package
+3. Allow ONLY:
+
+   * Add extra guests
+   * Add extra items
+   * Add upgrades
+
+### NOT allowed:
+
+* Removing items
+* Reducing guest count
+* Lowering price
+
+---
+
+## 💳 3. BALANCE / EXTRA PAYMENT CALCULATION
+
+### Required Logic:
+
+If user adds something:
+
+* Calculate:
+
+  * New total price
+  * Already paid amount
+  * Remaining balance = new total - paid amount
+
+### Show clearly:
+
+* “You need to pay extra: X amount”
+
+---
+
+## 🚫 4. PREVENT DOUBLE CHARGING (CRITICAL)
+
+### Fix:
+
+* Never charge full booking again
+* Only charge the difference (delta payment)
+
+### Example:
+
+* Original paid: 1000
+* Added items: +300
+* User pays ONLY: 300 extra
+
+---
+
+## 🧾 5. BOOKING STATE STRUCTURE (IMPORTANT)
+
+Each booking must store:
+
+* originalPrice
+* paidAmount
+* addedItems[]
+* updatedTotalPrice
+* balanceDue
+
+---
+
+## ⚠️ 6. SAFETY RULES
+
+* No duplicate payment triggers
+* No reset of booking after modify
+* No overwrite of original paid amount
+* All modifications must be incremental
+
+---
+
+## 🧠 UX REQUIREMENTS
+
+* Show clear breakdown:
+
+  * Original booking
+  * Added items
+  * Total updated price
+  * Remaining balance
+* Show warning if user tries to remove items:
+
+  * “You cannot reduce items after payment”
+
+---
+
+## ✅ FINAL RESULT EXPECTED
+
+* Price always updates correctly on modification
+* Only extra charges allowed after payment
+* No double charging possible
+* Clear balance system implemented
+* Professional booking modification system like real hotel/restaurant apps

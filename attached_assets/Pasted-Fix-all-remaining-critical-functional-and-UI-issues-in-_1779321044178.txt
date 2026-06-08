@@ -1,0 +1,207 @@
+Fix all remaining critical functional and UI issues in the application. This is a production-level cleanup and must be handled carefully without breaking existing features.
+
+---
+
+## 🛒 1. “Add New Card” BUTTON NOT WORKING
+
+### Issue:
+
+* Add New Card button is not responding or saving data.
+
+### Fix:
+
+* Ensure button is properly connected to payment method handler
+* Add card form must:
+
+  * Open correctly
+  * Validate inputs
+  * Save card data (or token via Stripe if used)
+* Fix missing event listeners or broken navigation
+
+---
+
+## 💎 2. VIP / MEMBERSHIP UPGRADE SKIPPING PAYMENT (CRITICAL BUG)
+
+### Issue:
+
+* VIP upgrade is happening instantly without payment confirmation
+
+### Fix:
+
+* MUST add payment step before upgrade
+* Flow must be:
+
+  1. User clicks upgrade
+  2. Payment screen opens (Stripe or configured gateway)
+  3. Payment success → then upgrade membership
+* Prevent direct state change without payment verification
+
+---
+
+## 🎯 3. FEATURE BANNERS NOT WORKING (Explore New / Tours / What’s New)
+
+### Issues:
+
+* Buttons not clickable or not responding
+* Gold color showing incorrectly in light mode
+
+### Fix:
+
+* Make all feature banners fully clickable
+* Fix routing for:
+
+  * Explore New
+  * Explore Tours
+  * What’s New
+* Remove incorrect gold styling in light mode
+* Ensure proper navigation and screen mapping
+
+---
+
+## 📦 4. CATEGORY SYSTEM IMPROVEMENTS
+
+### Add:
+
+* Add missing category: **Accessories**
+* Populate categories with proper products/services
+
+### Requirements:
+
+* Each category must have ~20 items
+* Ensure real structured data
+* Each item must include:
+
+  * Image
+  * Title
+  * Description
+  * Price (if applicable)
+
+### UI:
+
+* Add professional icons for all categories
+* Use consistent icon style across app
+
+---
+
+## 🎠 5. SWIPE / CAROUSEL ISSUES (FEATURE BANNERS + SPLASH SCREEN)
+
+### Issue:
+
+* Swipe not working in feature banners
+* Splash screen carousel not sliding properly
+
+### Fix:
+
+* Enable proper horizontal swipe gestures
+* Ensure:
+
+  * Pagination indicators work
+  * Auto-scroll (if enabled) works
+  * Touch gestures are responsive on mobile/web
+
+---
+
+## 🛍️ 6. SHOPPING / CART SYSTEM NOT WORKING
+
+### Issue:
+
+* Add to cart buttons not functional
+
+### Fix:
+
+* Fix cart state management
+* Ensure:
+
+  * Items can be added
+  * Items persist in cart
+  * Quantity updates correctly
+* Fix missing or broken handlers
+
+---
+
+## ❌ 7. BOOKING CANCEL / SUBMIT LOGIC BUG
+
+### Issue:
+
+* Booking cancel or submit happens instantly without confirmation
+
+### Fix:
+
+* Add proper confirmation flow:
+
+  * Reason input (optional or required)
+  * Confirmation dialog
+  * Prevent accidental submission/cancellation
+* Ensure backend logic validates request before processing
+
+---
+
+## 🎨 8. LIGHT MODE GOLD COLOR BUG (GLOBAL THEME ISSUE)
+
+### Problem:
+
+Gold color is incorrectly appearing in many places in LIGHT MODE:
+
+* Settings icons
+* VIP badges
+* Profile elements
+* QR code area
+* Maps / directions
+* Reserve buttons
+
+### Fix:
+
+* REMOVE global gold override in light mode
+* Implement proper theme system:
+
+  * lightTheme colors
+  * darkTheme colors
+
+### Required:
+
+* Light mode must NOT show gold unless explicitly designed
+* VIP/gold styling must be conditional only for premium elements
+* Fix all icons using gold tint in light mode
+
+---
+
+## 🧾 9. CHECKOUT TERMS NOT ENFORCED
+
+### Issue:
+
+* Users can checkout without accepting terms
+
+### Fix:
+
+* Enforce mandatory checkbox:
+
+  * “I agree to Terms & Conditions”
+* Block checkout until checked
+* Add validation error message if not accepted
+
+---
+
+## 🛒 10. CART / ADD TO CART NOT WORKING
+
+### Issue:
+
+* Many add-to-cart buttons do nothing
+
+### Fix:
+
+* Ensure:
+
+  * onClick handlers are connected
+  * product IDs are valid
+  * cart context/store is working
+* Fix broken state updates
+
+---
+
+## ⚠️ FINAL REQUIREMENTS
+
+* Fix ALL issues without breaking existing features
+* Use proper state management (global store/context)
+* Ensure consistent navigation and routing
+* Remove all hardcoded gold styling in light mode
+* Make app fully production-ready and stable

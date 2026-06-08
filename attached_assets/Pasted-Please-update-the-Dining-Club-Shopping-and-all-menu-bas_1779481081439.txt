@@ -1,0 +1,164 @@
+Please update the Dining, Club, Shopping, and all menu-based ordering sections to match the approved design and improve usability.
+
+## 🔴 DINING MENU ACTION BUTTONS
+
+### Current Issue:
+
+The current action buttons do not look professional and some interactions are unclear.
+
+### Required Fix:
+
+For every Dining/Menu item:
+
+### View Button
+
+* Change the button text to exactly:
+
+  * **"View"**
+* Remove any unnecessary wording such as:
+
+  * View Details
+  * See Details
+  * More Info
+* Use a clean professional button style matching the design
+
+---
+
+### Add to Cart Button
+
+The current Add to Cart design needs improvement.
+
+Requirements:
+
+* Replace with a professional modern cart action
+* Use a clean high-quality cart icon
+* Consistent sizing across all menu cards
+* Match the approved mockup style
+* Clear visual feedback when item is added
+
+Examples of feedback:
+
+* Added state
+* Checkmark confirmation
+* Quantity update
+* Cart counter update
+
+The user must immediately understand that the item was added successfully.
+
+---
+
+## 🛒 CART FUNCTIONALITY AUDIT
+
+Current issue:
+Cart interactions sometimes appear unresponsive or stack incorrectly.
+
+Required fix:
+
+* Every cart button must be clickable
+* No overlapping click layers
+* No blocked touch events
+* No frozen states
+* No duplicated actions
+
+Verify:
+
+* Add item
+* Increase quantity
+* Decrease quantity
+* Remove item
+* Open cart
+
+All actions must work reliably.
+
+---
+
+## 📌 FLOATING "VIEW CART" BAR
+
+I provided a screenshot showing the desired behavior.
+
+Please implement a professional floating View Cart component.
+
+Requirements:
+
+* Display only after at least one item has been added
+* Hidden when cart is empty
+* Fixed position near bottom of screen
+* Professional styling
+* Mobile-friendly spacing
+* Smooth appearance animation
+
+Display information such as:
+
+* Item count
+* Current subtotal
+* View Cart button
+
+Example behavior:
+
+Cart Empty:
+→ No View Cart bar visible
+
+Cart Contains Items:
+→ View Cart bar appears automatically
+
+---
+
+## 📍 WHERE IT MUST APPEAR
+
+Implement the View Cart component anywhere ordering is possible:
+
+* Dining menus
+* Club menus
+* Restaurant menus
+* Food ordering screens
+* Beverage ordering screens
+* Any screen where items can be added to cart
+
+Only show it when cart contains items.
+
+---
+
+## 🔗 VIEW CART ACTION
+
+When user taps View Cart:
+
+* Open the correct cart page
+* Preserve current cart state
+* Show all selected items
+* Show quantities
+* Show subtotal
+* Allow editing
+
+No broken navigation.
+
+No placeholder screens.
+
+---
+
+## 🎨 DESIGN REQUIREMENT
+
+Match the provided screenshot as closely as possible.
+
+Use:
+
+* Professional spacing
+* Professional typography
+* Professional iconography
+* Professional button styling
+
+Do not use outdated or generic cart buttons.
+
+---
+
+## ✅ VERIFICATION
+
+Before completion:
+
+* Verify Add to Cart works
+* Verify cart counter updates
+* Verify View Cart appears only when needed
+* Verify View Cart opens correctly
+* Verify quantity controls work
+* Verify Dining, Club, and Shopping menus all behave consistently
+
+Do not mark complete until all cart interactions function correctly and match the approved design.

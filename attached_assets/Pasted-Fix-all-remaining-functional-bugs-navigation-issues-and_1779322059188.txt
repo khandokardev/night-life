@@ -1,0 +1,158 @@
+Fix all remaining functional bugs, navigation issues, and UI interaction problems in the app. This is a production-critical stability update.
+
+---
+
+## 📷 1. QR CODE SAVE & SHARE NOT WORKING
+
+### Issue:
+
+* “Save QR” button not working
+* “Share QR” button not working
+
+### Fix:
+
+* Implement proper image export/download for QR
+* Ensure:
+
+  * Save downloads image to device/gallery
+  * Share opens native share sheet (WhatsApp, Messenger, etc.)
+* Fix missing permissions and handlers
+
+---
+
+## 🗺️ 2. MAPS & DIRECTIONS STILL SHOWING GOLD COLOR
+
+### Issue:
+
+* Directions, map UI, and related icons still appear gold in light mode
+
+### Fix:
+
+* Remove ALL global gold styling leakage
+* Ensure:
+
+  * Map UI uses neutral/light theme colors
+  * Directions button uses theme-based color system
+* Gold must ONLY appear in VIP/premium context (if intended)
+
+---
+
+## 🖼️ 3. “VIEW ALL GALLERY” BUTTON NOT WORKING
+
+### Issue:
+
+* Gallery “View All” button does nothing
+
+### Fix:
+
+* Connect button to proper gallery screen route
+* Ensure:
+
+  * Navigation target exists
+  * Data is passed correctly
+  * UI loads full image grid view
+
+---
+
+## 🥂 4. MENU (+ ADD CART) BUTTONS NOT WORKING
+
+### Issue:
+
+* Champagne, Vodka, and other menu items:
+
+  * Add to cart (+) button not working
+
+### Fix:
+
+* Fix cart event handlers
+* Ensure:
+
+  * Each product has valid ID
+  * onClick updates cart state
+* Verify cart context/store is properly connected
+
+---
+
+## 💰 5. “ESTIMATED TOTAL” COLOR STILL GOLD
+
+### Issue:
+
+* Checkout summary/total price still gold in light mode
+
+### Fix:
+
+* Remove hardcoded gold styling
+* Replace with theme-based neutral color (black/gray in light mode)
+* Ensure dynamic theming is applied globally
+
+---
+
+## 🛒 6. SIZE SELECT BUG (CRITICAL UX ISSUE)
+
+### Current Problem:
+
+* Clicking size opens product page instead of selecting size
+
+### Fix:
+
+* Size selection must be independent component
+* Correct flow:
+
+  1. User clicks size → size gets selected
+  2. THEN user can press “Add to Cart”
+* DO NOT open product page when selecting size
+
+### Rule:
+
+* Product detail opens ONLY when:
+
+  * User clicks product card/image/title
+* NOT when interacting with size selector
+
+---
+
+## ❤️ 7. “YOU MAY ALSO LIKE” PRODUCTS NOT CLICKABLE
+
+### Issue:
+
+* Suggested products not opening
+
+### Fix:
+
+* Add click handler to each suggested product
+* Ensure:
+
+  * Navigates to product detail page
+  * Loads correct product data dynamically
+
+---
+
+## 🎠 8. FEATURE BANNER SWIPE NOT WORKING
+
+### Issue:
+
+* Feature banners cannot be swiped
+* User cannot view next banner
+
+### Fix:
+
+* Enable horizontal swipe gestures
+* Ensure:
+
+  * Touch events are enabled
+  * Carousel logic works correctly
+  * Pagination indicators update
+* Fix splash screen carousel if affected
+
+---
+
+## ⚠️ FINAL SYSTEM REQUIREMENTS
+
+* Fix all event handlers (buttons, icons, swipe, cart, share)
+* Remove ALL unintended gold styling in light mode
+* Ensure proper separation of:
+
+  * Click actions (product open)
+  * Interaction actions (size select, add to cart)
+* Make UI fully responsive and production-ready
+* No broken navigation or silent failures allowed

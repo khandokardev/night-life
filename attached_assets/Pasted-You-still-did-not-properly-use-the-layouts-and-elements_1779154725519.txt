@@ -1,0 +1,206 @@
+You still did not properly use the layouts and elements from the screenshots. The screenshots clearly show many products, categories, upper menus, booking tools, and navigation sections, but those are still missing or incomplete in the app.
+
+Please carefully review ALL attached screenshots again and properly rebuild every section according to the layouts shown there.
+
+IMPORTANT FIXES REQUIRED:
+
+TOP MENUS & PRODUCTS
+
+* The upper menu sections shown in the screenshots must be recreated properly
+* Add all menu categories exactly where they should be
+* Add realistic demo products/packages/items under every relevant category
+* Every menu must be functional and clickable
+* Every category should open the correct related content
+
+NAVIGATION & VIEW ALL BUTTONS
+
+* I noticed many “View All” buttons are not working
+* Fix all “View All” buttons across the full app
+* Every button should open the correct screen/page
+* Check the full app navigation carefully because many screens are still not connected properly
+
+BOOKING FEATURES
+The screenshots previously provided clearly included features such as:
+
+* Add to Calendar
+* Booking Details
+* Edit Booking
+* QR Code Access
+* Reservation Management
+* Schedule Details
+
+Please add and fully connect all of these features professionally.
+
+FUNCTIONALITY FIXES
+Many buttons currently exist visually but do not work. Please check and fix every screen carefully.
+
+Examples:
+
+* Dining tabs like Past / Cancelled are not working
+* Apply Promo Code button is not functioning
+* Book Now buttons are inconsistent
+* Booking edit options are not working
+* Some menus are inaccessible
+* Some filters/tabs do nothing
+* QR Code flow is repetitive and incorrect
+* Some navigation paths are broken
+
+Fix ALL non-functional buttons, tabs, menus, filters, selectors, cards, and actions throughout the entire app.
+
+QR CODE FLOW FIX
+Currently:
+
+* “View QR Code” opens another unnecessary “Show My QR Code” option
+
+Fix this professionally:
+
+* Clicking “View QR Code” should directly open the QR code screen/modal immediately
+* Make the booking QR experience clean and realistic
+
+MAP & LOCATION FEATURES
+I noticed there is no:
+
+* Map direction option
+* Open in Maps option
+* Navigation integration
+
+Please add:
+
+* Open in Google Maps / Apple Maps
+* Venue location preview
+* Direction buttons
+* Distance information
+
+PROFILE & SETTINGS FIXES
+The Profile and Settings sections are incomplete and many options do not function.
+
+Please professionally fix:
+
+* Edit Profile
+* Saved Cards
+* Notifications
+* Preferences
+* Privacy Settings
+* Security Settings
+* Account Management
+* Logout
+* Booking History
+* Saved Experiences
+
+DARK / LIGHT MODE
+Add:
+
+* Fully functional Dark Mode
+* Fully functional Light Mode
+* Global theme switching
+* Smooth transition between themes
+* Ensure all screens support both themes correctly
+
+LANGUAGE SYSTEM
+Add a proper language selector like a real professional app.
+
+Only include necessary languages such as:
+
+* English
+* French
+* Arabic
+* Portuguese
+* Afrikaans
+
+Requirements:
+
+* All selected languages must work properly
+* Navigation, buttons, labels, and menus should translate correctly
+* Keep translation structure scalable
+
+SHOP SECTION FIXES
+In SA Plug Shop:
+
+* Many products do not have images
+* Add proper high-quality product images
+* Add more realistic demo products if needed
+* Fix product cards and product details professionally
+
+REVIEW SYSTEM
+I think review/rating features are missing or incomplete.
+
+Please add a fully working review system everywhere appropriate:
+
+* Clubs
+* Dining
+* Tours
+* Products
+* Experiences
+
+Include:
+
+* Star ratings
+* User reviews
+* Write review option
+* Review submission flow
+* Review summary section
+
+BOTTOM & BACK NAVIGATION
+Please check carefully:
+
+* Where back buttons should exist
+* Where bottom navigation should appear
+* Which pages should hide bottom navigation
+
+Fix all navigation logic professionally.
+
+PAYMENT SECTION FIX
+The “Proceed Payment” button appears too high and misaligned.
+Please reposition and align it properly according to premium checkout UI standards.
+
+CARD & PAYMENT FEATURES
+Improve Add Card and Payment Methods professionally.
+
+Add if necessary:
+
+* Card validation
+* Save card option
+* Remove card
+* Default payment selection
+* Multiple payment methods
+* Payment confirmation states
+
+SCREENSHOT STRUCTURE FOLLOWING
+I have attached multiple screenshots categorized as:
+
+* Home Experience
+* Dining and Reservation
+* Shop Experience
+* Tours
+
+Please carefully identify each screenshot group and apply the correct layout, sections, flow, and navigation to the matching pages.
+
+LEGAL & TEXT FILES
+I also attached text files for:
+
+* Payment Terms
+* Partner & Venue Disclaimer
+* Terms & Conditions
+* Refund & Cancellation Policy
+
+Please professionally integrate these into the app:
+
+* Properly formatted pages
+* Premium readable layouts
+* Accessible from Settings/Footer/Profile/Checkout where appropriate
+* Fully connected navigation
+
+FINAL REQUIREMENT
+Everything added or fixed must:
+
+* Work properly
+* Be accessible
+* Match the screenshot layouts
+* Feel premium and production-ready
+* Use professional icons
+* Have proper spacing and alignment
+* Include realistic demo data where needed
+* Avoid duplicate screens/components
+* Maintain clean scalable architecture
+
+The final app should feel like a real luxury commercial application with fully working navigation, booking, checkout, reservations, shop, dining, tours, and profile management systems.

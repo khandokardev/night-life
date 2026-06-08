@@ -1,0 +1,127 @@
+🚨 CRITICAL SECURITY BUG – AUTHENTICATION IS COMPLETELY BROKEN
+
+The app is currently allowing FULL ACCESS with invalid credentials.
+
+This is a SEVERE security failure.
+
+---
+
+# 🔴 CURRENT PROBLEM
+
+The following are NOT working correctly:
+
+* Login accepts ANY email/password (even wrong or random text)
+* Signup allows account creation without proper validation
+* Forgot password works without verifying account existence
+* OTP verification can be bypassed or is not enforced
+* Users can access full app without authentication
+
+This means authentication is completely bypassed.
+
+---
+
+# ❌ REQUIRED FIX (NON-NEGOTIABLE)
+
+## 1. STRICT LOGIN VALIDATION
+
+* Must verify email exists in database
+* Must verify password matches stored hashed password
+* Reject ALL invalid credentials
+* No auto-login fallback allowed
+
+Show proper errors:
+
+* "Invalid email or password"
+* "Account does not exist"
+
+---
+
+## 2. SIGNUP SECURITY FIX
+
+* Validate email format strictly
+* Prevent duplicate account creation
+* Require password rules (min length, etc.)
+* MUST NOT create account without proper validation
+* OTP verification must be REQUIRED before activation
+
+---
+
+## 3. OTP SYSTEM MUST BE ENFORCED
+
+* OTP must be validated from backend
+* Wrong OTP must block account access
+* Expired OTP must be rejected
+* No bypass allowed under any condition
+
+---
+
+## 4. SESSION SECURITY FIX
+
+* Do NOT allow login without valid session token
+* Do NOT allow access to protected routes without authentication
+* Protect ALL sensitive screens:
+
+  * Profile
+  * Checkout
+  * Booking
+  * Orders
+  * Payment
+
+---
+
+## 5. ROUTE PROTECTION (CRITICAL)
+
+Implement proper auth guard:
+
+* If user is NOT logged in:
+  → block access to restricted pages
+  → redirect to login/signup
+
+* No screen should be accessible with fake login
+
+---
+
+## 6. SOCIAL LOGIN BUG
+
+Fix Google / Facebook / Apple login:
+
+* Must NOT auto-login without valid OAuth response
+* Must verify provider token before login success
+* Must NOT redirect directly to home without authentication
+
+---
+
+## 7. DEBUG REQUIREMENT
+
+* Log all auth attempts
+* Log invalid login attempts
+* Validate backend response before granting access
+* Ensure no client-side bypass exists
+
+---
+
+# 🔒 FINAL RULE
+
+Under NO condition should the app allow:
+
+* Login with random text
+* Access without valid credentials
+* Signup without validation
+* OTP bypass
+* Unauthorized access to protected screens
+
+---
+
+# 🎯 ACCEPTANCE CRITERIA
+
+The system is ONLY correct if:
+
+* Invalid login ALWAYS fails
+* Wrong credentials NEVER grant access
+* OTP is strictly enforced
+* Protected pages are blocked without auth
+* No bypass path exists anywhere in the app
+
+---
+
+Fix this as a HIGH PRIORITY SECURITY ISSUE.

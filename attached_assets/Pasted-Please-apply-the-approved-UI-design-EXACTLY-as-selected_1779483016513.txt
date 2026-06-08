@@ -1,0 +1,163 @@
+Please apply the approved UI design EXACTLY as selected those all canvas.
+
+Do NOT change any design elements, layout, or styling.
+
+---
+
+# 🔴 CRITICAL REQUIREMENT
+
+* Use the design EXACTLY as provided (1:1 match)
+* Do NOT modify UI structure
+* Do NOT redesign login/signup/forgot/OTP screens
+* Do NOT change visual hierarchy or layout
+* Only fix functionality and security logic
+
+---
+
+# 🔐 AUTHENTICATION SYSTEM FIX (MAJOR ISSUE)
+
+## CURRENT ISSUE:
+
+The authentication system is broken.
+
+* Login works even with wrong email/password
+* Signup works without proper validation
+* OTP verification is not properly enforced
+* Forgot password flow is not secure
+* Users can access authenticated features without proper login
+
+This is a critical security failure.
+
+---
+
+# ✅ REQUIRED FIX (STRICT SECURITY RULES)
+
+## 1. LOGIN VALIDATION
+
+* Validate email format strictly
+* Validate password correctness properly
+* Reject incorrect credentials
+* Show proper error messages:
+
+  * "Invalid email or password"
+  * "Account not found"
+  * "Please verify your credentials"
+
+DO NOT allow login with wrong data.
+
+---
+
+## 2. SIGNUP VALIDATION
+
+* Validate email uniqueness
+* Validate password strength
+* Validate required fields
+* Prevent account creation with invalid input
+* OTP verification must be required before account activation
+
+---
+
+## 3. OTP VERIFICATION (MANDATORY)
+
+* OTP must be required for account activation
+* Wrong OTP must be rejected
+* Expired OTP must be rejected
+* No bypass allowed
+
+---
+
+## 4. GOOGLE / FACEBOOK / APPLE LOGIN BUG
+
+## CURRENT ISSUE:
+
+Clicking social login icons directly logs user into the app without proper authentication flow.
+
+## REQUIRED FIX:
+
+* Proper OAuth flow must be implemented
+* Do NOT auto-login without provider confirmation
+* Handle authentication callback properly
+* Only allow login if provider returns valid session
+
+---
+
+## 5. SKIP / GUEST MODE (NEW FEATURE)
+
+Add a professional "Continue as Guest / Skip" option.
+
+### Behavior:
+
+* User can browse all menus and view content
+* User CANNOT:
+
+  * Place orders
+  * Proceed to checkout payment
+  * Confirm booking
+  * Make purchases
+
+### When guest tries restricted action:
+
+* Show login/signup required screen
+
+---
+
+## 6. PURCHASE / PAYMENT RESTRICTION (CRITICAL)
+
+## RULE:
+
+* Users MUST be logged in to:
+
+  * Checkout
+  * Pay
+  * Confirm booking
+  * Place order
+
+Guest users can:
+
+* Browse app
+* Add items to cart
+* View products
+
+BUT:
+
+* Payment step must force login/signup
+
+---
+
+## 7. CART BEHAVIOR
+
+* Cart must work for guest users (temporary)
+* Cart must persist
+* BUT checkout is blocked until login
+
+---
+
+## 8. ERROR HANDLING
+
+* Wrong email/password → show proper error
+* Wrong OTP → show proper error
+* Invalid input → show validation messages
+* No silent failures
+* No auto-login fallback
+
+---
+
+# 🎯 FINAL ACCEPTANCE RULE
+
+The system is only correct if:
+
+* Authentication is fully secure
+* No bypass login is possible
+* Social login works properly (not auto redirect to home)
+* OTP is enforced correctly
+* Guest mode works with restrictions
+* Payment requires authentication
+* UI remains EXACTLY same as provided design
+
+---
+
+# ⚠️ IMPORTANT
+
+Fix ONLY logic and functionality.
+
+DO NOT change UI design or layout in any way.

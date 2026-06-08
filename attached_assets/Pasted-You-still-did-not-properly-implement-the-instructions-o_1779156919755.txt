@@ -1,0 +1,252 @@
+You still did not properly implement the instructions or follow the screenshots correctly. Almost nothing is functioning professionally yet, and many important features, layouts, categories, menus, products, and navigation flows are still missing or incomplete.
+
+I already clearly explained everything in detail before, including which screenshots belong to which pages and what features must exist there. You need to carefully analyze every screenshot deeply and rebuild the related pages properly instead of creating incomplete placeholder sections.
+
+CRITICAL ISSUES THAT MUST BE FIXED IMMEDIATELY:
+
+1. TOP CATEGORIES & MENUS
+
+* The top category menus shown in the screenshots are still mostly empty
+* You only added menu names without real content
+* Every category must contain proper demo products, packages, experiences, listings, cards, images, and related content
+* Every category must open and function correctly
+* Every menu item must navigate properly
+
+2. PRODUCTS & IMAGES
+
+* You still did not add proper products or images
+* Many sections are empty
+* SA Plug Shop still lacks realistic products and professional images
+* Add high-quality demo products everywhere needed:
+
+  * Clubs
+  * Dining
+  * Tours
+  * Experiences
+  * Shop
+  * VIP packages
+  * Reservation packages
+* Every product card must include:
+
+  * image
+  * title
+  * price
+  * rating
+  * details
+  * favorite option
+  * booking/cart option
+
+3. SLIDERS & BANNERS
+
+* You only placed one image in sliders/banners
+* The screenshots clearly showed multiple banners/sliding sections
+* Add proper auto-sliding hero banners
+* Add multiple promotional banners
+* Add pagination indicators
+* Add clickable banners
+* Add realistic promotional content
+
+4. SETTINGS & PROFILE
+
+* Settings and Profile are still mostly non-functional
+* Almost every option is broken or empty
+
+Fix ALL settings professionally:
+
+* Edit Profile
+* Change Password
+* Notification Settings
+* Language Settings
+* Theme Settings
+* Payment Methods
+* Saved Cards
+* Booking History
+* Wishlist
+* Privacy Settings
+* Security Settings
+* Help Center
+* Logout
+* Account Management
+
+Every option must open a real working screen.
+
+5. DARK / LIGHT MODE
+
+* Light mode is completely broken
+* It only turns the screen white without proper UI styling
+
+Fix the entire theme system professionally:
+
+* Full dark theme
+* Full light theme
+* Proper component colors
+* Proper text contrast
+* Proper card backgrounds
+* Proper navbar colors
+* Proper icon colors
+* Proper modal colors
+* Proper form styling
+* Theme persistence globally across all screens
+
+6. MAPS & LOCATION
+
+* No maps or direction functionality exists
+
+Add:
+
+* Venue map preview
+* Open in Maps
+* Google Maps integration structure
+* Apple Maps support structure
+* Distance display
+* Navigation button
+
+7. REVIEWS & RATINGS
+
+* Review system is missing or incomplete
+
+Add fully working:
+
+* star ratings
+* write review
+* review list
+* rating summary
+* review submission
+* user feedback section
+
+Add reviews everywhere appropriate:
+
+* clubs
+* dining
+* tours
+* products
+* experiences
+
+8. BOOKING FLOW
+
+* Many booking buttons still do nothing
+* Book Now buttons are inconsistent
+* Booking details cannot be edited
+* QR code flow is incorrect
+* Add to Calendar is missing
+* Reservation tabs are broken
+
+Fix the full booking system professionally:
+
+* booking details
+* edit reservation
+* cancel booking
+* reschedule booking
+* add to calendar
+* booking QR code
+* download invoice
+* share booking
+* payment confirmation
+* booking status
+
+9. BUTTONS & ACCESSIBILITY
+   Many buttons across the app are still fake/non-functional.
+
+Fix ALL:
+
+* View All buttons
+* category buttons
+* tabs
+* filters
+* promo code buttons
+* checkout buttons
+* reservation buttons
+* profile options
+* settings options
+* wishlist buttons
+* cart buttons
+
+Every button must actually perform a real action/navigation.
+
+10. SCREENSHOT IMPLEMENTATION
+    You still did not properly study the screenshots.
+
+I already explained the screenshot groups:
+
+* Home Experience
+* Dining & Reservation
+* Shop Experience
+* Tours
+* Club Booking
+
+You must:
+
+* identify each screenshot correctly
+* apply the correct layout to the correct page
+* copy the structure professionally
+* include all visible sections/features shown in those screenshots
+
+11. NAVIGATION & UI STRUCTURE
+
+* Navigation is still inconsistent
+* Some pages have missing back buttons
+* Some screens show bottom navigation incorrectly
+* Some pages cannot be accessed properly
+
+Fix:
+
+* bottom navigation logic
+* back navigation
+* screen hierarchy
+* tab transitions
+* internal navigation
+* page routing
+
+12. CHECKOUT & PAYMENT
+
+* Checkout flow is incomplete
+* Payment section alignment is wrong
+* Proceed Payment button positioning is bad
+
+Fix:
+
+* payment summary
+* promo code
+* taxes
+* reservation details
+* payment methods
+* saved cards
+* order confirmation
+* booking confirmation
+* checkout spacing
+* sticky payment button positioning
+
+13. LEGAL PAGES
+    I already provided text files for:
+
+* Payment Terms
+* Partner & Venue Disclaimer
+* Terms & Conditions
+* Refund & Cancellation Policy
+
+You still did not integrate them properly.
+
+Create:
+
+* fully designed legal pages
+* properly formatted layouts
+* connected navigation
+* professional typography
+* accessible from profile/settings/checkout/footer
+
+FINAL REQUIREMENT:
+Do NOT leave placeholders or empty sections anymore.
+
+Everything must:
+
+* work properly
+* be connected
+* contain realistic demo data
+* contain professional images
+* contain working navigation
+* contain functional buttons
+* match the screenshots correctly
+* feel like a real premium production mobile app
+
+You must carefully inspect every screen and every screenshot before making changes.
+Do not skip details anymore.

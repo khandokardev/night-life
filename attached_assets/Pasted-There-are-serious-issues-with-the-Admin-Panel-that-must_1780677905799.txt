@@ -1,0 +1,150 @@
+There are serious issues with the Admin Panel that must be fixed completely.
+
+## ADMIN PANEL PERFORMANCE & FUNCTIONALITY FIX
+
+### 1. Loading Issues
+
+Many admin menu sections (Dashboard, Settings, Products, Services, etc.) stay stuck on loading or load very slowly.
+
+Required:
+
+* Audit all admin routes and API calls.
+* Remove unnecessary loading delays.
+* Fix broken queries and data fetching.
+* Ensure all menus load quickly and consistently.
+* No blank pages or endless loading states.
+
+### 2. Settings Section Is Not Functional
+
+Currently the Settings page shows:
+
+"No settings found."
+
+This is unacceptable for a production admin panel.
+
+Required:
+Create a fully functional Settings system including:
+
+* App Name
+* App Logo
+* App Icon
+* Splash Screen
+* Theme Settings
+* Contact Information
+* Email Settings
+* Social Media Links
+* Terms & Conditions
+* Privacy Policy
+* About Us
+* Support Information
+* Notification Settings
+* Payment Settings
+* Firebase Configuration
+* Stripe Configuration
+* Branding Settings
+* Homepage Configuration
+
+The Settings page must never be empty.
+
+### 3. Full Content Management Required
+
+The Admin Panel currently lacks many management options.
+
+Every section must provide complete control over all content shown inside the mobile app.
+
+For Products:
+
+* Product Name
+* Description
+* Price
+* Sale Price
+* Category
+* Images
+* Banner Images
+* Gallery Images
+* Stock
+* Variants
+* Sizes
+* Featured Status
+* Visibility
+
+For Services:
+
+* Service Name
+* Description
+* Banner Image
+* Gallery Images
+* Pricing
+* Categories
+* Availability
+* Featured Status
+
+For Restaurants:
+
+* Cover Banner
+* Gallery Images
+* Menu Images
+* Description
+* Address
+* Contact Details
+* Opening Hours
+* Dress Code
+
+For Clubs:
+
+* Cover Images
+* Gallery Images
+* VIP Packages
+* Bottle Service
+* Events
+* Pricing
+
+For Tours:
+
+* Banner Images
+* Gallery Images
+* Itinerary
+* Pricing
+* Availability
+* Booking Information
+
+### 4. Image Management Missing
+
+Many sections do not allow uploading:
+
+* Cover Images
+* Hero Banners
+* Gallery Images
+* Promotional Banners
+
+Add image upload functionality everywhere it is required.
+
+### 5. Real-Time Synchronization
+
+Any change made in Admin Panel must instantly reflect in the mobile app.
+
+Requirements:
+
+* Database-driven architecture only.
+* No hardcoded content.
+* Real-time synchronization between Admin Panel and App.
+* All edits, deletions, additions and updates must appear automatically.
+
+### 6. Professional Enterprise Admin Panel
+
+Audit every menu and every submenu.
+
+If a menu exists:
+
+* It must display data.
+* It must have proper CRUD functionality.
+* It must save correctly.
+* It must load correctly.
+* It must synchronize with the app.
+
+No placeholder pages.
+No demo pages.
+No fake menus.
+No empty sections.
+
+Convert the entire Admin Panel into a fully functional production-ready management system with complete control over every feature, service, product, image, banner, category, booking, review, notification and app setting.

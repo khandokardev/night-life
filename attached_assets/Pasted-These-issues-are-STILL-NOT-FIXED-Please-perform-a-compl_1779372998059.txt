@@ -1,0 +1,172 @@
+These issues are STILL NOT FIXED. Please perform a complete audit of the theme system and shopping navigation stack. Do not apply partial fixes.
+
+## 🎨 LIGHT MODE GOLD COLOR ISSUE (STILL NOT FIXED)
+
+The app still has gold colors appearing in Light Mode.
+
+### Areas that still contain gold colors:
+
+* VIP Member Status section
+* Profile picture outer circular border/ring
+* Appearance all toggle (enable/disable switch)
+* Settings page icons
+* Settings page list items
+* Settings and  page navigation arrows
+* Premium/VIP labels
+* Any remaining icons, badges, or highlights using gold
+
+### Required Fix:
+
+Perform a FULL THEME AUDIT.
+
+Search the entire codebase for:
+
+* hardcoded gold colors
+* amber colors
+* yellow colors
+* premium accent colors
+* theme override colors
+
+Examples:
+
+* #FFD700
+* #FFC107
+* #FFB300
+* gold
+* amber
+* yellow
+* premiumColor
+* vipColor
+
+### Requirements:
+
+* In LIGHT MODE:
+
+  * Use only the approved light theme color palette
+  * Remove ALL unintended gold colors
+* In DARK MODE:
+
+  * Keep dark theme styling separate
+* VIP status can remain visually distinct, but must follow light theme styling and not force gold throughout the UI
+
+### Audit These Screens:
+
+* Profile
+* Settings
+* Appearance
+* Language
+* Edit Profile
+* Privacy Settings
+* Terms & Conditions
+* Membership
+* VIP Status
+*refund policy
+*Payment terms
+*Partner Disclaimer
+*Change Password
+*Privacy settings
+
+---
+
+## 🔙 SHOPPING PRODUCT NAVIGATION STACK (STILL BROKEN)
+
+### Current Problem:
+
+This bug has been reported multiple times and is still not fixed.
+
+Example:
+
+1. Open Product A
+2. From "You May Also Like", open Product B
+3. From Product B, open Product C
+4. Press Back
+
+### Expected:
+
+Product C → Product B → Product A → Shopping Home
+
+### Actual:
+
+Product C → Shopping Home
+
+This is incorrect.
+
+---
+
+## ❌ Root Cause To Investigate
+
+Check for:
+
+* navigation.replace()
+* router.replace()
+* history.replaceState()
+* route reset logic
+* stack clearing logic
+* navigate('/shopping')
+* forced redirects
+* scroll-based navigation
+
+The app appears to be replacing routes instead of pushing them.
+
+---
+
+## ✅ Required Fix
+
+When opening any product:
+
+Use:
+
+* push navigation
+* stack navigation
+* history preservation
+
+Do NOT use:
+
+* replace navigation
+* route reset
+
+Every product detail page must be added to navigation history.
+
+---
+
+## "YOU MAY ALSO LIKE" PRODUCT NAVIGATION
+
+Products opened from:
+
+* You May Also Like
+* Related Products
+* Featured Products
+* Best Sellers
+
+must create a NEW history entry.
+
+They must not replace the existing product page.
+
+---
+
+## BACK BUTTON RULE
+
+Back navigation must work exactly like major e-commerce apps:
+
+Product C → Back → Product B
+
+Product B → Back → Product A
+
+Product A → Back → Shopping Category/Page
+
+NOT:
+
+Product C → Back → Shopping Home
+
+---
+
+## TEST REQUIRED
+
+Manually test:
+
+* Product A → Product B → Product C
+* Back button multiple times
+
+Verify every step returns to the previous product and preserves navigation history correctly.
+
+Do not mark this task complete until this exact flow works correctly.
