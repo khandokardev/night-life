@@ -15,7 +15,8 @@ export const customInstance = async <T>(
   const token = localStorage.getItem("saPlugAdminToken");
   const base = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
-  const url = new URL(config.url, window.location.origin);
+  const apiBase = (import.meta.env.VITE_API_URL as string) || window.location.origin;
+  const url = new URL(config.url, apiBase);
   if (config.params) {
     Object.entries(config.params).forEach(([k, v]) => url.searchParams.set(k, String(v)));
   }

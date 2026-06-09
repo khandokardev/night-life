@@ -38,7 +38,7 @@ Premium luxury nightlife and lifestyle app platform for South Africa — include
 - Contract-first: OpenAPI spec → codegen → typed client hooks + server Zod schemas
 - JWT auth (access + refresh tokens); admin routes require `role === "admin"`
 - Admin Panel uses a custom Orval mutator (`artifacts/admin-panel/src/lib/mutator.ts`) that attaches `Authorization: Bearer <token>` from localStorage
-- Standalone backend (`sa-plug-backend.tar.gz`) is for Hostinger Node.js hosting; monorepo `api-server` is the Replit dev copy
+- Standalone backend (`sa-plug-backend.tar.gz`) is for Hostinger Node.js hosting; monorepo `api-server` is the local dev copy
 - Drizzle ORM with `drizzle-kit push` for schema migrations (dev); no drizzle-zod in standalone backend
 
 ## Product
